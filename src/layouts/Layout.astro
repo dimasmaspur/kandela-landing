@@ -1,0 +1,51 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Kandela Technology" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-white min-h-screen font-normal antialiased">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@import "tailwindcss";
+	
+	/* Disable default smooth scrolling for GSAP */
+	html {
+		scroll-behavior: auto;
+	}
+	
+	/* Ultra smooth optimizations */
+	body::-webkit-scrollbar {
+		width: 0px;
+		background: transparent;
+	}
+	
+	/* Lenis CSS optimizations */
+	html.lenis {
+		height: auto;
+	}
+	
+	.lenis.lenis-smooth {
+		scroll-behavior: auto;
+	}
+	
+	.lenis.lenis-smooth [data-lenis-prevent] {
+		overscroll-behavior: contain;
+	}
+</style> 

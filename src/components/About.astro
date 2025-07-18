@@ -1,0 +1,44 @@
+---
+import FloatingBox from "./FloatingBox.astro";
+import ScrollVelocity from "./reactbits/ScrollVelocity";
+---
+
+<section id="about" class="w-full h-full relative pb-30"     style="background: linear-gradient(to bottom,#011340 20%, #ffffff 100% );"
+>
+    <div class="container mx-auto z-10 relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col bg-white/80 rounded-3xl sm:rounded-[48px] lg:rounded-[64px] min-h-[80vh] lg:min-h-[90vh]">
+            <div
+                class="flex flex-col items-start justify-start mt-6 sm:mt-8 w-full overflow-hidden"
+            >
+                <ScrollVelocity
+                    texts={["About Us", "Kandela Technology"]}
+                    velocity={150}
+                    className="custom-scroll-text"
+                    client:load
+                />
+            </div>
+            <div
+                class="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-8 justify-between items-start w-full px-4 sm:px-6 lg:px-8 mt-8 sm:mt-16 lg:mt-32"
+            >
+                <div class="w-full lg:w-1/2 order-2 lg:order-1 pb-8">
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold pb-3 sm:pb-4 text-center lg:text-left">About Kandela</h1>
+                    <p class="text-sm sm:text-base lg:text-lg text-gray-800 leading-relaxed text-center lg:text-left">
+                        Kandela Technology is a technology company dedicated to delivering innovative digital solutions. We specialize in web and mobile application development, blockchain technology, and digital transformation for various industries.
+                        <br><br>
+                        With an experienced and passionate team, we are committed to delivering the best results that not only meet our clients' needs but also provide added value for their business growth. Every project we undertake is designed with attention to detail and high quality standards.
+                        <br><br>
+                        Our vision is to become a trusted partner in the digital transformation journey, helping businesses grow with cutting-edge technology and sustainable solutions.
+                    </p>
+                </div>
+                <div class="w-full lg:w-1/2 order-1 lg:order-2 flex justify-center lg:justify-end">
+                   <img src="/about.jpg" alt="About Kandela Technology" class="w-full sm:w-4/5 lg:w-full h-auto lg:h-full max-w-md lg:max-w-none lg:scale-80 object-cover rounded-2xl sm:rounded-3xl lg:rounded-[32px] shadow-lg">
+                </div>
+            </div>
+            <div class="absolute bottom-4 sm:bottom-6 lg:bottom-0 w-full flex justify-center items-center px-4 sm:px-6 lg:px-8">
+                <div class="w-full sm:w-3/4 md:w-2/3 lg:w-[60%]">
+                    <FloatingBox/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

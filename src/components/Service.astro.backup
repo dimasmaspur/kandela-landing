@@ -1,0 +1,84 @@
+---
+import ScrollVelocity from "./reactbits/ScrollVelocity";
+import Card from "./Card.astro";
+import LiquidChrome from "./reactbits/LiquidChrome";
+---
+
+<section id="service" class="w-full h-full relative">
+    <div class="absolute w-full h-full z-0">
+        <LiquidChrome
+            baseColor={[0.1, 0.1, 0.1]}
+            speed={1}
+            amplitude={0.4}
+            interactive={true}
+            client:load
+        />
+    </div>
+    <div class="container mx-auto z-10 relative py-16">
+        <div class="flex flex-col bg-white/80 rounded-[64px] min-h-[90vh]">
+            <div
+                class="flex flex-col items-start justify-start mt-8 w-full overflow-hidden"
+            >
+                <ScrollVelocity
+                    texts={["Services", "We Offer"]}
+                    velocity={150}
+                    className="custom-scroll-text"
+                    client:load
+                />
+            </div>
+            <div
+                class="flex flex-row justify-between items-center w-full px-8 mt-32"
+            >
+                <div class="w-1/2">
+                    <h1 class="text-4xl font-bold">Services</h1>
+                    <p class="text-gray-800">
+                        At Kandela Technology, we illuminate your digital
+                        aspirations with cutting-edge solutions designed for the
+                        modern world. Our expertise spans across diverse
+                        technological landscapes, ensuring your vision shines
+                        bright.
+                    </p>
+                </div>
+                <div class="w-1/2 text-right">
+                    <a
+                        href="#kontak"
+                        class="bg-black text-white rounded-full px-20 py-2 text-lg font-bold shadow hover:bg-gray-800 transition-colors"
+                        >Contact Us</a
+                    >
+                </div>
+            </div>
+            <div
+                class="flex flex-row justify-between items-center w-full pt-8 px-8 h-full pb-8"
+            >
+                <div
+                    class="w-full flex gap-4 h-full bg-white/30 p-4 rounded-[32px]"
+                >
+                    <div class="w-1/3">
+                        <Card
+                            title="Web & App Development"
+                            description="We create responsive, user-friendly websites that are optimized for search engines and designed to convert visitors into customers."
+                            imgSrc="/1.png"
+                            imgAlt="Web Development"
+                        />
+                    </div>
+                    <div class="w-1/3">
+                        <Card
+                            title="Web & App Development"
+                            description="We create responsive, user-friendly websites that are optimized for search engines and designed to convert visitors into customers."
+                            imgSrc="/1.png"
+                            imgAlt="Web Development"
+                        />
+                    </div>
+                    <div class="w-1/3">
+                        <Card
+                            title="Web & App Development"
+                            description="We create responsive, user-friendly websites that are optimized for search engines and designed to convert visitors into customers."
+                            imgSrc="/1.png"
+                            imgAlt="Web Development"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

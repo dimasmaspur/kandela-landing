@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* Import Fontshare fonts */
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap");
+
+/* Font configurations */
+:root {
+  font-family: 'Satoshi', sans-serif;
+}
+
+body {
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Ultra smooth scrolling optimizations */
+html {
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  /* Force 60fps rendering */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  /* Ultra smooth performance optimizations */
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  /* Force compositor layer */
+  will-change: scroll-position;
+  /* Reduce motion blur */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  /* Ultra smooth font rendering */
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+
+
+/* Performance optimizations for ultra smooth scrolling */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Section optimizations for ultra smoothness */
+section {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, opacity;
+  /* Force new stacking context */
+  isolation: isolate;
+  /* Optimize repaint */
+  contain: layout style paint;
+  /* Ultra smooth transitions */
+  transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Parallax elements */
+[data-speed] {
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide default scrollbar */
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: none;
+}
+
+/* Ultra smooth transitions */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ultra smooth GPU acceleration for all elements */
+* {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* Optimize specific elements for maximum smoothness */
+img, video {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  will-change: transform;
+}
+
+/* Ultra smooth container optimizations */
+div, main, article, aside {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Reduce layout thrashing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* Optimize for smooth animations */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* High refresh rate display optimizations */
+@media (min-resolution: 120dpi) {
+  * {
+    will-change: transform;
+    /* Force 120fps on high refresh displays */
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
+

@@ -1,0 +1,373 @@
+---
+
+---
+
+<style>
+    .footer-gradient {
+        background-color: #011340;
+        /* backdrop-filter: blur(20px); */
+        /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
+    }
+
+    .footer-glow {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-glow::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+                circle at 20% 20%,
+                rgba(99, 102, 241, 0.1) 0%,
+                transparent 50%
+            ),
+            radial-gradient(
+                circle at 80% 80%,
+                rgba(168, 85, 247, 0.1) 0%,
+                transparent 50%
+            );
+        pointer-events: none;
+    }
+
+    .social-icon {
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .social-icon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .social-icon:hover::before {
+        opacity: 1;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer-link {
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .footer-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #6366f1, #a855f7);
+        transition: width 0.3s ease;
+    }
+
+    .footer-link:hover::after {
+        width: 100%;
+    }
+
+    .footer-link:hover {
+        color: #a855f7;
+    }
+
+    .logo-text {
+        background: linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #e2e8f0 50%,
+            #cbd5e1 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+
+    .contact-info {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .contact-info:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive typography */
+    @media (max-width: 640px) {
+        .contact-info {
+            padding: 1rem;
+        }
+    }
+</style>
+
+<footer id="footer" class="footer-gradient footer-glow relative py-8 sm:py-12 lg:py-16">
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Main Footer Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
+            <!-- Company Info -->
+            <div class="lg:col-span-2 xl:col-span-3 space-y-4 sm:space-y-6">
+                <div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold logo-text leading-tight">
+                        Kandela Technology
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-300 mt-2 font-light">
+                        Your guide light to innovation
+                    </p>
+                </div>
+
+                <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    We illuminate your digital aspirations with cutting-edge
+                    solutions designed for the modern world. Our expertise spans
+                    across diverse technological landscapes, ensuring your
+                    vision shines bright in the digital realm.
+                </p>
+
+                <div class="contact-info">
+                    <h3 class="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-lg">
+                        Why Choose Kandela?
+                    </h3>
+                    <div class="space-y-2 sm:space-y-3">
+                        <div class="flex items-start space-x-2 sm:space-x-3">
+                            <div class="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex-shrink-0 mt-1">
+                            </div>
+                            <span class="text-gray-300 text-sm sm:text-base"
+                                >Consistency: delivering reliable solutions
+                                every time</span
+                            >
+                        </div>
+                        <div class="flex items-start space-x-2 sm:space-x-3">
+                            <div class="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex-shrink-0 mt-1">
+                            </div>
+                            <span class="text-gray-300 text-sm sm:text-base"
+                                >Innovation: continuously seeking creative and
+                                effective approaches</span
+                            >
+                        </div>
+                        <div class="flex items-start space-x-2 sm:space-x-3">
+                            <div class="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex-shrink-0 mt-1">
+                            </div>
+                            <span class="text-gray-300 text-sm sm:text-base"
+                                >Clarity: Ensuring transparency and clear
+                                communication in every process</span
+                            >
+                        </div>
+                        <div class="flex items-start space-x-2 sm:space-x-3">
+                            <div class="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex-shrink-0 mt-1">
+                            </div>
+                            <span class="text-gray-300 text-sm sm:text-base"
+                                >Reliability: Building trust through dependable
+                                results</span
+                            >
+                        </div>
+                        <div class="flex items-start space-x-2 sm:space-x-3">
+                            <div class="w-4 h-4 sm:w-5 sm:h-5 bg-black rounded-full flex-shrink-0 mt-1">
+                            </div>
+                            <span class="text-gray-300 text-sm sm:text-base"
+                                >Dedication: Prioritizing client satisfaction
+                                and long-term partnerships</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Get In Touch -->
+            <div class="lg:col-span-2 xl:col-span-2 space-y-4 sm:space-y-6">
+                <h3 class="text-white font-semibold text-2xl sm:text-3xl mb-4 sm:mb-6">
+                    Get In Touch
+                </h3>
+
+                <!-- Contact Form -->
+                <div class="contact-info">
+                    <form class="space-y-3 sm:space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                            <div>
+                                <label
+                                    for="name"
+                                    class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2"
+                                    >Full Name</label
+                                >
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent backdrop-blur-sm transition-all text-sm sm:text-base"
+                                    placeholder="Your name"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    for="email"
+                                    class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2"
+                                    >Email Address</label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent backdrop-blur-sm transition-all text-sm sm:text-base"
+                                    placeholder="your.email@example.com"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label
+                                for="subject"
+                                class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2"
+                                >Subject</label
+                            >
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent backdrop-blur-sm transition-all text-sm sm:text-base"
+                                placeholder="Project discussion"
+                            />
+                        </div>
+
+                        <div>
+                            <label
+                                for="message"
+                                class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2"
+                                >Message</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="3"
+                                class="w-full px-3 py-2 sm:px-4 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent backdrop-blur-sm transition-all resize-none text-sm sm:text-base"
+                                placeholder="Tell us about your project..."
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            id="secure-send-btn"
+                            class="w-full bg-black text-white font-semibold py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-gray-800 transform hover:translateY(-1px) transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
+                        >
+                            Kirim Pesan
+                        </button>
+                        <script type="text/javascript">
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const btn = document.getElementById('secure-send-btn');
+                                btn.addEventListener('click', function (event) {
+                                    event.preventDefault();
+                                    // Validasi sederhana
+                                    const name = document.getElementsByName('name')[0].value.trim();
+                                    const email = document.getElementsByName('email')[0].value.trim();
+                                    const subject = document.getElementById('subject').value.trim();
+                                    const message = document.getElementById('message').value.trim();
+
+                                    if (!name || !email || !subject || !message) {
+                                        alert('Semua field harus diisi.');
+                                        return;
+                                    }
+                                    // Validasi email sederhana
+                                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                    if (!emailPattern.test(email)) {
+                                        alert('Format email tidak valid.');
+                                        return;
+                                    }
+
+                                    const mailto = 'mailto:hello@kandela.tech'
+                                        + '?subject=' + encodeURIComponent(subject)
+                                        + '&body=Nama: ' + encodeURIComponent(name)
+                                        + '%0AEmail: ' + encodeURIComponent(email)
+                                        + '%0APesan: ' + encodeURIComponent(message);
+
+                                    window.location.href = mailto;
+                                });
+                            });
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media & Copyright -->
+        <div class="border-t border-gray-700 pt-6 sm:pt-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 gap-4">
+                <!-- Copyright -->
+                <div class="text-gray-400 text-center sm:text-left">
+                    <p class="text-sm sm:text-base">&copy; 2025 Kandela Technology. All rights reserved.</p>
+                </div>
+
+                <!-- Social Media -->
+                <div class="flex space-x-4 sm:space-x-6">
+                    <a
+                        href="https://instagram.com/kandela.tech"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        class="social-icon rounded-xl"
+                    >
+                        <svg
+                            width="40"
+                            height="40"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="rounded-xl sm:w-12 sm:h-12"
+                        >
+                            <rect width="48" height="48" rx="12" fill="#000000"
+                            ></rect>
+                            <path
+                                d="M30 15a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V18a3 3 0 0 1 3-3h12zm0-3H18a6 6 0 0 0-6 6v12a6 6 0 0 0 6 6h12a6 6 0 0 0 6-6V18a6 6 0 0 0-6-6zm-6 6.75a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5zm6.375-1.125a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25z"
+                                fill="#fff"></path>
+                        </svg>
+                    </a>
+
+                    <a
+                        href="https://linkedin.com/company/kandelatech"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        class="social-icon rounded-xl"
+                    >
+                        <svg
+                            width="40"
+                            height="40"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="rounded-xl sm:w-12 sm:h-12"
+                        >
+                            <rect width="48" height="48" rx="12" fill="#000000"
+                            ></rect>
+                            <path
+                                d="M18.75 19.5h-3.75v12h3.75v-12zm-1.875-6a1.875 1.875 0 1 0 0 3.75 1.875 1.875 0 0 0 0-3.75zm6.375 6h-3.75v12h3.75v-6c0-1.65 1.35-3 3-3s3 1.35 3 3v6h3.75v-6.75c0-3.315-2.685-6-6-6z"
+                                fill="#fff"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

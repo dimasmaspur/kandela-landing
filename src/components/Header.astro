@@ -1,0 +1,148 @@
+---
+// Optional props if you want to add dynamic menu/button in the future
+---
+
+<header class="w-full absolute top-0 left-0 right-0 z-50 px-4">
+  <div class="container mx-auto  flex items-center justify-between bg-white/70 backdrop-blur-md border border-white/30 rounded-full mt-2 md:mt-4 px-4 md:px-8 py-2">
+    <!-- Logo -->
+    <img src="/logo-k-shine.webp" alt="Kandela Technology" class="h-8 md:h-12 w-auto" />
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex flex-1 justify-center">
+      <ul class="flex space-x-8 xl:space-x-16 rounded-full px-4 xl:px-8 py-2">
+        <li>
+          <a href="#service" class="text-black text-base xl:text-lg font-medium transition-colors relative group px-2 py-1">
+            Services
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-700 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#portofolio" class="text-black text-base xl:text-lg font-medium transition-colors relative group px-2 py-1">
+            Portfolio
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-700 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="text-black text-base xl:text-lg font-medium transition-colors relative group px-2 py-1">
+            About
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-700 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Contact Button -->
+    <div class="hidden md:block">
+      <a href="#footer" class="bg-black text-white rounded-full px-4 lg:px-8 py-2 text-sm lg:text-lg font-bold shadow hover:bg-gray-800 transition-colors">
+        <span class="hidden lg:inline">Contact Us</span>
+        <span class="lg:hidden">Contact</span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button 
+      id="mobile-menu-button" 
+      class="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+      aria-label="Toggle mobile menu"
+    >
+      <span class="block w-6 h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
+      <span class="block w-6 h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
+      <span class="block w-6 h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div 
+    id="mobile-menu" 
+    class="lg:hidden absolute top-full left-4 right-4 mt-2 bg-white/90 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg transform scale-95 opacity-0 pointer-events-none transition-all duration-300 ease-in-out"
+  >
+    <nav class="p-6">
+      <ul class="space-y-4">
+        <li>
+          <a href="#service" class="block text-black text-lg font-medium py-2 px-4 rounded-lg hover:bg-gray-100/50 transition-colors mobile-menu-link">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="#portofolio" class="block text-black text-lg font-medium py-2 px-4 rounded-lg hover:bg-gray-100/50 transition-colors mobile-menu-link">
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="block text-black text-lg font-medium py-2 px-4 rounded-lg hover:bg-gray-100/50 transition-colors mobile-menu-link">
+            About
+          </a>
+        </li>
+        <li class="pt-2 border-t border-gray-200/50">
+          <a href="#footer" class="block bg-black text-white text-center rounded-full px-6 py-3 text-lg font-bold shadow hover:bg-gray-800 transition-colors mobile-menu-link">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    if (!mobileMenu || !mobileMenuButton) return;
+    
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      // Open menu
+      mobileMenu.classList.remove('scale-95', 'opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('scale-100', 'opacity-100');
+      
+      // Animate hamburger to X
+      const spans = mobileMenuButton.querySelectorAll('span');
+      if (spans[0]) spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+      if (spans[1]) spans[1].style.opacity = '0';
+      if (spans[2]) spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+    } else {
+      // Close menu
+      mobileMenu.classList.add('scale-95', 'opacity-0', 'pointer-events-none');
+      mobileMenu.classList.remove('scale-100', 'opacity-100');
+      
+      // Reset hamburger
+      const spans = mobileMenuButton.querySelectorAll('span');
+      if (spans[0]) spans[0].style.transform = 'none';
+      if (spans[1]) spans[1].style.opacity = '1';
+      if (spans[2]) spans[2].style.transform = 'none';
+    }
+  }
+
+  // Toggle menu on button click
+  mobileMenuButton?.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking on links
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) {
+        toggleMenu();
+      }
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as Node;
+    if (isMenuOpen && mobileMenuButton && mobileMenu && 
+        !mobileMenuButton.contains(target) && !mobileMenu.contains(target)) {
+      toggleMenu();
+    }
+  });
+
+  // Close menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isMenuOpen) {
+      toggleMenu();
+    }
+  });
+</script> 
