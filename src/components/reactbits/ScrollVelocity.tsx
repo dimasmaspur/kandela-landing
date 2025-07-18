@@ -8,7 +8,7 @@ import {
   useVelocity,
   useAnimationFrame,
 } from "framer-motion";
-import "../../styles/scrollVelocity.css";
+import "../../styles/ScrollVelocity.css";
 
 interface VelocityMapping {
   input: [number, number];
