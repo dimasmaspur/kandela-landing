@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import SmoothScrolling from '../components/reactbits/SmoothScrolling';
+import ScrollVelocity from '../components/reactbits/ScrollVelocity';
+---
+
+<Layout title="Our Projects - Kandela Technology">
+    <SmoothScrolling client:load>
+        <Header />
+        
+        <!-- Hero Section -->
+        <section class="w-full relative bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 pt-20 pb-8">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Page Title -->
+                <div class="text-center mb-12 lg:mb-16 pt-16 lg:pt-20">
+                
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Our Portfolio
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Explore our complete collection of innovative projects that showcase our expertise. 
+                        Each project reflects our dedication to delivering cutting-edge technology solutions 
+                        for business growth and exceptional user satisfaction.
+                    </p>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-10 mb-12 lg:mb-16">
+                    <!-- Project 1 -->
+                    <div class="h-[550px] lg:h-[820px] mb-6 lg:mb-0">
+                        <Card
+                            title="Digital Desa"
+                            description="Digital Desa is a comprehensive digital platform that helps Indonesian villages undergo digital transformation, from administrative services and village information to empowering the village economy online in an integrated manner."
+                            imgSrc="/p1.png"
+                            imgAlt="Digital Desa"
+                        />
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="h-[550px] lg:h-[820px] mb-6 lg:mb-0">
+                        <Card
+                            title="Teritorial"
+                            description="Teritorial is a news website that delivers up-to-date, sharp, and reliable information on national issues, politics, law, economy, and other important topics in Indonesia."
+                            imgSrc="/p2.png"
+                            imgAlt="Teritorial"
+                        />
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="h-[550px] lg:h-[820px] mb-6 lg:mb-0">
+                        <Card
+                            title="Angelbull"
+                            description="Anglebull is a comprehensive investment platform that provides real-time market analysis, portfolio management tools, and advanced trading features to help investors make informed financial decisions."
+                            imgSrc="/anglebull.png"
+                            imgAlt="Anglebull"
+                        />
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="h-[550px] lg:h-[820px] mb-6 lg:mb-0">
+                        <Card
+                            title="Podomoro Park"
+                            description="Podomoro Park is a premium residential and commercial development website showcasing luxury properties, amenities, and location advantages with an elegant design and seamless user experience."
+                            imgSrc="/Podomoro Park.png"
+                            imgAlt="Podomoro Park"
+                        />
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="h-[550px] lg:h-[820px] mb-6 lg:mb-0">
+                        <Card
+                            title="Royal Gading SPA"
+                            description="Royal Gading SPA is an elegant wellness center website featuring spa services, treatment packages, online booking system, and a serene digital experience that reflects luxury and relaxation."
+                            imgSrc="/Royal Gading.png"
+                            imgAlt="Royal Gading SPA"
+                        />
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="h-[550px] lg:h-[820px] mb-6 lg:mb-0">
+                        <Card
+                            title="Warung Pintar"
+                            description="Warung Pintar is a smart retail technology platform that digitizes traditional Indonesian warungs with inventory management, point-of-sale systems, and data analytics to modernize local businesses."
+                            imgSrc="/Warung Pintar.png"
+                            imgAlt="Warung Pintar"
+                        />
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center bg-white/20 backdrop-blur-md border border-white/30 shadow-xl rounded-3xl lg:rounded-[48px] p-8 lg:p-12 mt-8 lg:mt-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                        Have a Project Idea?
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-8 lg:mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Let's discuss how we can help bring your digital vision to reality 
+                        with cutting-edge technology solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center items-center">
+                        <a
+                            href="#footer"
+                            class="border-2 border-gray-900 text-gray-900 bg-transparent rounded-full px-8 lg:px-12 py-3 lg:py-4 text-lg font-bold shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300 inline-block w-full sm:w-auto"
+                        >
+                            Free Consultation
+                        </a>
+                        <a
+                            href="/"
+                            class="bg-gray-900 text-white rounded-full px-8 lg:px-12 py-3 lg:py-4 text-lg font-bold shadow-lg hover:bg-gray-800 transition-colors inline-block w-full sm:w-auto"
+                        >
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Footer />
+    </SmoothScrolling>
+</Layout>
+
+<style>
+    .custom-scroll-text {
+        font-size: clamp(3rem, 8vw, 8rem);
+        font-weight: 900;
+        line-height: 0.8;
+        color: #1e293b;
+        opacity: 0.1;
+    }
+</style>
