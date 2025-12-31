@@ -10,11 +10,49 @@ const handleAnimationComplete = () => {
 ---
 
 <section
-    class="relative w-full min-h-screen flex items-center justify-center bg-white overflow-hidden"
+    class="relative w-full min-h-screen flex items-center justify-center bg-white overflow-hidden hero-section"
 >
+    <!-- Loading Overlay with Skeleton -->
+    <div id="hero-loader" class="absolute inset-0 z-50 bg-white transition-opacity duration-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+            <div class="flex-1 w-full">
+                <!-- Skeleton Badge -->
+                <div class="flex justify-center lg:justify-start mb-6">
+                    <div class="h-10 w-64 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-full animate-pulse-slow"></div>
+                </div>
+                
+                <!-- Skeleton Heading -->
+                <div class="space-y-4 mb-6">
+                    <div class="h-12 sm:h-16 lg:h-20 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-lg animate-pulse-slow"></div>
+                    <div class="h-12 sm:h-16 lg:h-20 w-3/4 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-lg animate-pulse-slow" style="animation-delay: 0.1s;"></div>
+                </div>
+                
+                <!-- Skeleton Description -->
+                <div class="space-y-3 mb-8 max-w-2xl">
+                    <div class="h-6 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded animate-pulse-slow" style="animation-delay: 0.2s;"></div>
+                    <div class="h-6 w-5/6 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded animate-pulse-slow" style="animation-delay: 0.3s;"></div>
+                </div>
+                
+                <!-- Skeleton Buttons -->
+                <div class="flex gap-4 mb-12">
+                    <div class="h-14 w-48 bg-gradient-to-r from-[#00B4D8]/30 via-[#00B4D8]/20 to-[#00B4D8]/30 rounded-full animate-pulse-slow" style="animation-delay: 0.4s;"></div>
+                    <div class="h-14 w-48 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-full animate-pulse-slow" style="animation-delay: 0.5s;"></div>
+                </div>
+                
+                <!-- Loading Spinner (centered) -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="w-12 h-12 border-4 border-[#00B4D8] border-t-transparent rounded-full animate-spin"></div>
+                        <p class="text-[#0D3B66] text-sm font-semibold">Loading Experience...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Background Effect -->
-    <div class="absolute inset-0 z-0">
-        <LiquidEither colors={["#00B4D8", "#00B4D8", "#ffffff"]} client:load />
+    <div class="absolute inset-0 z-0 hero-background">
+        <LiquidEither colors={["#00B4D8", "#00B4D8", "#ffffff"]} client:idle />
     </div>
 
     <!-- Floating Decorative Elements -->
@@ -69,7 +107,7 @@ const handleAnimationComplete = () => {
                     initialOpacity={0}
                     animateOpacity
                     delay={0}
-                    client:load
+                    client:idle
                 >
                     <div class="flex justify-center lg:justify-start mb-4 sm:mb-6">
                         <div
@@ -100,7 +138,7 @@ const handleAnimationComplete = () => {
                             direction="top"
                             onAnimationComplete={handleAnimationComplete}
                             className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-tight justify-center lg:justify-start"
-                            client:load
+                            client:idle
                         />
                     </div>
                 </div>
@@ -115,7 +153,7 @@ const handleAnimationComplete = () => {
                             direction="top"
                             onAnimationComplete={handleAnimationComplete}
                             className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed justify-center lg:justify-start"
-                            client:load
+                            client:idle
                         />
                     </div>
                 </div>
@@ -133,7 +171,7 @@ const handleAnimationComplete = () => {
                         initialOpacity={0}
                         animateOpacity
                         delay={0.4}
-                        client:load
+                        client:idle
                     >
                         <a
                             href="/Company_Profile_Kandelatech.pdf"
@@ -168,7 +206,7 @@ const handleAnimationComplete = () => {
                         initialOpacity={0}
                         animateOpacity
                         delay={0.5}
-                        client:load
+                        client:idle
                     >
                         <a
                             href="/#service"
@@ -204,7 +242,7 @@ const handleAnimationComplete = () => {
                     initialOpacity={0}
                     animateOpacity
                     delay={0.6}
-                    client:load
+                    client:idle
                 >
                     <div
                         class="grid grid-cols-3 gap-3 sm:gap-6 max-w-xl mx-auto lg:mx-0"
@@ -260,7 +298,7 @@ const handleAnimationComplete = () => {
                     initialOpacity={0}
                     animateOpacity
                     delay={0.7}
-                    client:load
+                    client:idle
                 >
                     <div class="grid grid-cols-2 gap-4 max-w-lg ml-auto">
                         <!-- Card 1 -->
@@ -490,4 +528,75 @@ const handleAnimationComplete = () => {
     .animate-scroll {
         animation: scroll 2s ease-in-out infinite;
     }
+
+    /* Hide content initially */
+    .hero-section .hero-background,
+    .hero-section .container {
+        opacity: 0;
+        transition: opacity 0.7s ease-in-out;
+    }
+
+    .hero-section.loaded .hero-background,
+    .hero-section.loaded .container {
+        opacity: 1;
+    }
+
+    /* Skeleton pulse animation */
+    @keyframes pulse-slow {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    .animate-pulse-slow {
+        animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
 </style>
+
+<script>
+    // Wait for all critical resources to load
+    function initHeroSection() {
+        const heroSection = document.querySelector('.hero-section');
+        const loader = document.getElementById('hero-loader');
+        
+        if (!heroSection || !loader) return;
+
+        // Function to hide loader and show content
+        function showContent() {
+            heroSection.classList.add('loaded');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 700);
+        }
+
+        // Check if page is already loaded
+        if (document.readyState === 'complete') {
+            // Give a small delay for React components to hydrate
+            setTimeout(showContent, 500);
+        } else {
+            // Wait for window load event
+            window.addEventListener('load', () => {
+                setTimeout(showContent, 500);
+            });
+        }
+
+        // Fallback: Show content after max 3 seconds even if not fully loaded
+        setTimeout(() => {
+            if (!heroSection.classList.contains('loaded')) {
+                console.log('Fallback: Showing content after timeout');
+                showContent();
+            }
+        }, 3000);
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHeroSection);
+    } else {
+        initHeroSection();
+    }
+</script>

@@ -8,8 +8,29 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      // Optimize chunk splitting
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-vendor': ['react', 'react-dom'],
+            'three-vendor': ['three'],
+          }
+        }
+      }
+    }
   },
 
-  integrations: [react()]
+  integrations: [react()],
+  
+  // Image optimization
+  image: {
+    remotePatterns: [{ protocol: "https" }],
+  },
+  
+  // Build optimizations
+  build: {
+    inlineStylesheets: 'auto',
+  }
 });

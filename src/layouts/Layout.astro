@@ -71,6 +71,9 @@ const fullOgImage = `${siteUrl}${ogImage}`;
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		
+		<!-- Preload Critical Resources -->
+		<link rel="preload" href="/kandela-transparent.png" as="image" />
+		
 		<!-- Humans.txt -->
 		<link rel="author" href="/humans.txt" />
 		
@@ -104,6 +107,21 @@ const fullOgImage = `${siteUrl}${ogImage}`;
 		</script>
 	</head>
 	<body class="bg-white min-h-screen font-normal antialiased">
+		<!-- Global Page Loader -->
+		<div id="page-loader" class="fixed inset-0 z-[9999] bg-white flex items-center justify-center transition-opacity duration-500">
+			<div class="flex flex-col items-center gap-4">
+				<div class="relative">
+					<!-- Animated Logo or Spinner -->
+					<div class="w-20 h-20 border-4 border-[#00B4D8] border-t-transparent rounded-full animate-spin"></div>
+					<div class="absolute inset-0 w-20 h-20 border-4 border-[#0077B6] border-b-transparent rounded-full animate-spin-reverse opacity-50"></div>
+				</div>
+				<div class="text-center">
+					<h2 class="text-xl font-bold text-[#0D3B66] mb-1">Kandela Technology</h2>
+					<p class="text-sm text-gray-600">Preparing your experience...</p>
+				</div>
+			</div>
+		</div>
+		
 		<slot />
 	</body>
 </html>
@@ -134,4 +152,57 @@ const fullOgImage = `${siteUrl}${ogImage}`;
 	.lenis.lenis-smooth [data-lenis-prevent] {
 		overscroll-behavior: contain;
 	}
-</style> 
+
+	/* Page Loader Animations */
+	@keyframes spin-reverse {
+		from {
+			transform: rotate(360deg);
+		}
+		to {
+			transform: rotate(0deg);
+		}
+	}
+
+	.animate-spin-reverse {
+		animation: spin-reverse 1.5s linear infinite;
+	}
+
+	/* Hide page loader when loaded */
+	body.page-loaded #page-loader {
+		opacity: 0;
+		pointer-events: none;
+	}
+</style>
+
+<script is:inline>
+	// Page loader script - runs immediately
+	(function() {
+		// Hide loader when page is fully loaded
+		function hideLoader() {
+			document.body.classList.add('page-loaded');
+			setTimeout(function() {
+				var loader = document.getElementById('page-loader');
+				if (loader) {
+					loader.style.display = 'none';
+				}
+			}, 500);
+		}
+
+		// Check if page is already loaded
+		if (document.readyState === 'complete') {
+			setTimeout(hideLoader, 300);
+		} else {
+			window.addEventListener('load', function() {
+				setTimeout(hideLoader, 300);
+			});
+		}
+
+		// Fallback: Hide after 5 seconds max
+		setTimeout(function() {
+			if (!document.body.classList.contains('page-loaded')) {
+				console.log('Fallback: Hiding page loader after timeout');
+				hideLoader();
+			}
+		}, 5000);
+	})();
+</script>
