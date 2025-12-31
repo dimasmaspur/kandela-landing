@@ -2,20 +2,106 @@
 export interface Props {
 	title: string;
 	description?: string;
+	keywords?: string;
+	ogImage?: string;
+	ogType?: string;
+	canonical?: string;
 }
 
-const { title, description = "Kandela Technology" } = Astro.props;
+const { 
+	title, 
+	description = "Kandela Technology - Your Guiding Light in Innovation. Kami menyediakan solusi teknologi inovatif termasuk Web3 Development, Website & App Development, Custom Software, dan IT Staffing Solutions.",
+	keywords = "Kandela Technology, Web3 Development, Blockchain Development, Website Development, App Development, Custom Software, IT Staffing, Software House Jakarta, Technology Solutions Indonesia",
+	ogImage = "/kandela-transparent.png",
+	ogType = "website",
+	canonical = Astro.url.pathname
+} = Astro.props;
+
+const siteUrl = "https://kandela.tech";
+const fullUrl = `${siteUrl}${canonical}`;
+const fullOgImage = `${siteUrl}${ogImage}`;
 ---
 
 <!doctype html>
 <html lang="id">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="Kandela Technology" />
+		<meta name="robots" content="index, follow" />
+		<meta name="language" content="Indonesian" />
+		<meta name="revisit-after" content="7 days" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={fullUrl} />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/logo-k-shine.webp" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={fullUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullOgImage} />
+		<meta property="og:site_name" content="Kandela Technology" />
+		<meta property="og:locale" content="id_ID" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={fullUrl} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={fullOgImage} />
+		
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#00B4D8" />
+		<meta name="msapplication-TileColor" content="#00B4D8" />
+		
+		<!-- Preconnect for Performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		
+		<!-- Humans.txt -->
+		<link rel="author" href="/humans.txt" />
+		
+		<!-- Structured Data - Organization -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Kandela Technology",
+				"alternateName": "Kandela Tech",
+				"url": "https://kandela.tech",
+				"logo": "https://kandela.tech/logo-k-shine.webp",
+				"description": "Kandela Technology adalah perusahaan teknologi yang menyediakan solusi inovatif dalam Web3 Development, Website & App Development, Custom Software, dan IT Staffing Solutions.",
+				"email": "hello@kandela.tech",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Jakarta",
+					"addressCountry": "ID"
+				},
+				"sameAs": [
+					"https://instagram.com/kandela.tech",
+					"https://linkedin.com/company/kandelatech"
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"email": "hello@kandela.tech",
+					"contactType": "Customer Service",
+					"availableLanguage": ["Indonesian", "English"]
+				}
+			}
+		</script>
 	</head>
 	<body class="bg-white min-h-screen font-normal antialiased">
 		<slot />

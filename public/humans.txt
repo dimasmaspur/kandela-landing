@@ -1,0 +1,15 @@
+/* TEAM */
+Company: Kandela Technology
+Site: https://kandela.tech
+Email: hello@kandela.tech
+Location: Jakarta, Indonesia
+
+/* THANKS */
+To all our clients and partners who trust us with their digital transformation journey.
+
+/* SITE */
+Last update: 2025/01/01
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Astro, React, Tailwind CSS, GSAP
+Software: VS Code, Git
+
