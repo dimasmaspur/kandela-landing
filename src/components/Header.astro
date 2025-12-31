@@ -3,31 +3,43 @@
 ---
 
 <header class="w-full absolute top-0 left-0 right-0 z-50 px-4">
-  <div class="container mx-auto  flex items-center justify-between bg-white/70 backdrop-blur-md border border-white/30 rounded-full mt-2 md:mt-4 px-4 md:px-8 py-2">
+  <div class="container mx-auto flex items-center justify-between bg-white/30 backdrop-blur-2xl border border-white/60 rounded-full mt-2 md:mt-3 px-5 md:px-8 py-2 md:py-3 shadow-[0_8px_32px_rgba(0,180,216,0.15)] hover:shadow-[0_12px_48px_rgba(0,180,216,0.25)] transition-all duration-500">
     <!-- Logo -->
-    <a href="/" class="flex items-center">
-      <img src="/logo-k-shine.webp" alt="Kandela Technology" class="h-8 md:h-12 w-auto" />
+    <a href="/" class="relative flex items-center hover:scale-105 transition-transform duration-300 group">
+      <div class="absolute -inset-2 bg-gradient-to-r from-[#00B4D8]/20 to-[#0077B6]/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <img src="/logo-k-shine.webp" alt="Kandela Technology" class="relative h-8 md:h-12 w-auto" />
     </a>
     
     <!-- Desktop Navigation -->
     <nav class="hidden lg:flex flex-1 justify-center">
-      <ul class="flex space-x-8 xl:space-x-16 rounded-full px-4 xl:px-8 py-2">
+      <ul class="flex space-x-8 xl:space-x-12">
         <li>
-          <a href="/#service" class="text-black text-base xl:text-lg font-medium transition-colors relative group px-2 py-1">
+          <a href="/#service" class="text-[#0D3B66] text-base xl:text-lg font-semibold hover:text-[#00B4D8] transition-all duration-300 relative group px-3 py-2 hover:scale-105">
             Services
-            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-700 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] transition-all duration-300 group-hover:w-full rounded-full shadow-[0_0_8px_rgba(0,180,216,0.6)]"></span>
           </a>
         </li>
         <li>
-          <a href="/#portofolio" class="text-black text-base xl:text-lg font-medium transition-colors relative group px-2 py-1">
+          <a href="/#portofolio" class="text-[#0D3B66] text-base xl:text-lg font-semibold hover:text-[#00B4D8] transition-all duration-300 relative group px-3 py-2 hover:scale-105">
             Portfolio
-            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-700 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] transition-all duration-300 group-hover:w-full rounded-full shadow-[0_0_8px_rgba(0,180,216,0.6)]"></span>
           </a>
         </li>
         <li>
-          <a href="/#about" class="text-black text-base xl:text-lg font-medium transition-colors relative group px-2 py-1">
+          <a href="/#about" class="text-[#0D3B66] text-base xl:text-lg font-semibold hover:text-[#00B4D8] transition-all duration-300 relative group px-3 py-2 hover:scale-105">
             About
-            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-700 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] transition-all duration-300 group-hover:w-full rounded-full shadow-[0_0_8px_rgba(0,180,216,0.6)]"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/career" class="relative text-[#0D3B66] text-base xl:text-lg font-semibold hover:text-[#00B4D8] transition-all duration-300 group px-3 py-2 hover:scale-105">
+            Career
+            <!-- New Badge -->
+            <span class="absolute -top-1 -right-2 flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B4D8] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-[#00B4D8]"></span>
+            </span>
+            <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] transition-all duration-300 group-hover:w-full rounded-full shadow-[0_0_8px_rgba(0,180,216,0.6)]"></span>
           </a>
         </li>
       </ul>
@@ -35,49 +47,75 @@
 
     <!-- Desktop Contact Button -->
     <div class="hidden md:block">
-      <a href="/#footer" class="bg-black text-white rounded-full px-4 lg:px-8 py-2 text-sm lg:text-lg font-bold shadow hover:bg-gray-800 transition-colors">
-        <span class="hidden lg:inline">Contact Us</span>
-        <span class="lg:hidden">Contact</span>
+      <a href="/#footer" class="relative inline-flex items-center gap-2 overflow-hidden border-2 border-[#0077B6] text-[#0077B6] rounded-full px-5 lg:px-8 py-2 text-sm lg:text-base font-bold hover:text-white transition-all duration-300 group shadow-[0_0_20px_rgba(0,119,182,0.3)] hover:shadow-[0_0_30px_rgba(0,180,216,0.5)] hover:scale-105">
+        <span class="absolute inset-0 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
+        <svg class="relative z-10 w-4 h-4 lg:w-5 lg:h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+        <span class="relative z-10 hidden lg:inline">Contact Us</span>
+        <span class="relative z-10 lg:hidden">Contact</span>
       </a>
     </div>
 
     <!-- Mobile Menu Button -->
     <button 
       id="mobile-menu-button" 
-      class="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+      class="lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-[#00B4D8]/10 transition-colors duration-300"
       aria-label="Toggle mobile menu"
     >
-      <span class="block w-6 h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
-      <span class="block w-6 h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
-      <span class="block w-6 h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
+      <span class="block w-6 h-0.5 bg-[#0D3B66] transition-all duration-300 ease-in-out rounded-full"></span>
+      <span class="block w-6 h-0.5 bg-[#0D3B66] mt-1.5 transition-all duration-300 ease-in-out rounded-full"></span>
+      <span class="block w-6 h-0.5 bg-[#0D3B66] mt-1.5 transition-all duration-300 ease-in-out rounded-full"></span>
     </button>
   </div>
 
   <!-- Mobile Navigation Menu -->
   <div 
     id="mobile-menu" 
-    class="lg:hidden absolute top-full left-4 right-4 mt-2 bg-white/90 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg transform scale-95 opacity-0 pointer-events-none transition-all duration-300 ease-in-out"
+    class="lg:hidden absolute top-full left-4 right-4 mt-2 bg-white/40 backdrop-blur-2xl border border-white/60 rounded-3xl shadow-[0_12px_48px_rgba(0,180,216,0.25)] transform scale-95 opacity-0 pointer-events-none transition-all duration-400 ease-out"
   >
     <nav class="p-6">
-      <ul class="space-y-4">
+      <ul class="space-y-2">
         <li>
-          <a href="/#service" class="block text-black text-lg font-medium py-2 px-4 rounded-lg hover:bg-gray-100/50 transition-colors mobile-menu-link">
+          <a href="/#service" class="flex items-center gap-3 text-[#0D3B66] text-lg font-semibold py-3 px-5 rounded-2xl hover:bg-[#00B4D8]/10 hover:text-[#00B4D8] transition-all duration-300 mobile-menu-link group">
+            <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
             Services
           </a>
         </li>
         <li>
-          <a href="/#portofolio" class="block text-black text-lg font-medium py-2 px-4 rounded-lg hover:bg-gray-100/50 transition-colors mobile-menu-link">
+          <a href="/#portofolio" class="flex items-center gap-3 text-[#0D3B66] text-lg font-semibold py-3 px-5 rounded-2xl hover:bg-[#00B4D8]/10 hover:text-[#00B4D8] transition-all duration-300 mobile-menu-link group">
+            <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
             Portfolio
           </a>
         </li>
         <li>
-          <a href="/#about" class="block text-black text-lg font-medium py-2 px-4 rounded-lg hover:bg-gray-100/50 transition-colors mobile-menu-link">
+          <a href="/#about" class="flex items-center gap-3 text-[#0D3B66] text-lg font-semibold py-3 px-5 rounded-2xl hover:bg-[#00B4D8]/10 hover:text-[#00B4D8] transition-all duration-300 mobile-menu-link group">
+            <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
             About
           </a>
         </li>
-        <li class="pt-2 border-t border-gray-200/50">
-          <a href="/#footer" class="block bg-black text-white text-center rounded-full px-6 py-3 text-lg font-bold shadow hover:bg-gray-800 transition-colors mobile-menu-link">
-            Contact Us
+        <li>
+          <a href="/career" class="relative flex items-center gap-3 text-[#0D3B66] text-lg font-semibold py-3 px-5 rounded-2xl hover:bg-[#00B4D8]/10 hover:text-[#00B4D8] transition-all duration-300 mobile-menu-link group">
+            <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            Career
+            <span class="ml-auto px-2 py-0.5 text-xs font-bold bg-gradient-to-r from-[#00B4D8] to-[#0077B6] text-white rounded-full">New</span>
+          </a>
+        </li>
+        <li class="pt-4 mt-2 border-t border-[#00B4D8]/20">
+          <a href="/#footer" class="relative overflow-hidden flex items-center justify-center gap-2 border-2 border-[#0077B6] text-[#0077B6] text-center rounded-full px-8 py-4 text-lg font-bold hover:text-white transition-colors duration-300 mobile-menu-link group">
+            <span class="absolute inset-0 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
+            <svg class="relative z-10 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <span class="relative z-10">Contact Us</span>
           </a>
         </li>
       </ul>
@@ -104,9 +142,9 @@
       
       // Animate hamburger to X
       const spans = mobileMenuButton.querySelectorAll('span');
-      if (spans[0]) spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+      if (spans[0]) spans[0].style.transform = 'rotate(45deg) translate(5px, 7px)';
       if (spans[1]) spans[1].style.opacity = '0';
-      if (spans[2]) spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+      if (spans[2]) spans[2].style.transform = 'rotate(-45deg) translate(5px, -7px)';
     } else {
       // Close menu
       mobileMenu.classList.add('scale-95', 'opacity-0', 'pointer-events-none');

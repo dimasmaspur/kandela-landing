@@ -1,0 +1,494 @@
+---
+import AnimatedContent from "../reactbits/AnimatedContent";
+import BlurText from "../reactbits/BlurText";
+---
+
+<section
+  id="about"
+  class="relative bg-gradient-to-br from-white via-gray-50 to-white py-20 lg:py-32 overflow-hidden"
+>
+  <!-- Decorative Background Elements -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <!-- Gradient Orbs -->
+    <div class="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-[#00B4D8]/10 to-transparent rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-40 right-10 w-80 h-80 bg-gradient-to-br from-[#0077B6]/10 to-transparent rounded-full blur-3xl animate-float-delay"></div>
+    
+    <!-- Floating Shapes -->
+    <div class="absolute top-40 right-20 w-16 h-16 border-2 border-[#00B4D8]/20 rounded-lg rotate-12 animate-float"></div>
+    <div class="absolute bottom-60 left-32 w-20 h-20 border-2 border-[#0077B6]/20 rounded-full animate-float-delay"></div>
+    <div class="absolute top-1/2 left-10 w-12 h-12 border-2 border-[#00B4D8]/20 rotate-45 animate-float" style="animation-delay: 1s;"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16 lg:mb-20">
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0}
+        client:load
+      >
+        <div class="inline-flex items-center gap-2 bg-white/60 backdrop-blur-md border border-[#00B4D8]/30 rounded-full px-6 py-2 mb-6 shadow-lg">
+          <span class="w-2 h-2 bg-[#00B4D8] rounded-full animate-pulse"></span>
+          <span class="text-[#0D3B66] text-sm font-semibold">About Us</span>
+        </div>
+      </AnimatedContent>
+
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.1}
+        client:load
+      >
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6 [text-shadow:_0_2px_20px_rgb(0_180_216_/_20%)]">
+          Illuminating Your Digital Journey
+        </h2>
+      </AnimatedContent>
+
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.2}
+        client:load
+      >
+        <p class="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          We are Kandela Technology, your trusted partner in digital transformation, delivering innovative solutions that light the way to success.
+        </p>
+      </AnimatedContent>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16 lg:mb-20">
+      
+      <!-- Left Side - Image with Overlay Cards -->
+      <AnimatedContent
+        distance={100}
+        direction="horizontal"
+        reverse={false}
+        duration={2}
+        ease="power3.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.3}
+        client:load
+      >
+        <div class="relative h-full min-h-[400px] lg:min-h-[600px]">
+          <!-- Main Image -->
+          <div class="group relative h-full rounded-3xl overflow-hidden shadow-xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/30 to-[#0077B6]/30 mix-blend-overlay z-10 group-hover:from-[#00B4D8]/40 group-hover:to-[#0077B6]/40 transition-all duration-500"></div>
+            <img
+              src="/about.jpg"
+              alt="Kandela Technology Team"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            
+            <!-- Animated Border -->
+            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 3px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+          </div>
+
+          <!-- Floating Stats Cards -->
+          <div class="absolute -bottom-6 -right-6 lg:bottom-8 lg:right-8 z-20">
+            <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/60 group hover:scale-110 transition-all duration-300">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform duration-300">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-3xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">50+</div>
+                  <div class="text-xs font-bold text-gray-600">Projects Done</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute -top-6 -left-6 lg:top-8 lg:left-8 z-20">
+            <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/60 group hover:scale-110 transition-all duration-300">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-gradient-to-br from-[#0077B6] to-[#0D3B66] rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform duration-300">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-3xl font-black bg-gradient-to-br from-[#0077B6] to-[#0D3B66] bg-clip-text text-transparent">30+</div>
+                  <div class="text-xs font-bold text-gray-600">Happy Clients</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedContent>
+
+      <!-- Right Side - Content -->
+      <AnimatedContent
+        distance={100}
+        direction="horizontal"
+        reverse={true}
+        duration={2}
+        ease="power3.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.4}
+        client:load
+      >
+        <div class="flex flex-col justify-center h-full space-y-6">
+          
+          <!-- Mission Statement -->
+          <div class="space-y-4">
+            <h3 class="text-2xl lg:text-3xl font-black text-gray-900">
+              Who We Are
+            </h3>
+            <p class="text-base lg:text-lg text-gray-700 leading-relaxed">
+              Kandela Technology is a technology company dedicated to delivering innovative digital solutions. We specialize in <span class="font-bold text-[#0077B6]">web and mobile application development</span>, <span class="font-bold text-[#0077B6]">blockchain technology</span>, and <span class="font-bold text-[#0077B6]">digital transformation</span> for various industries.
+            </p>
+          </div>
+
+          <!-- Value Props Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Card 1 -->
+            <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-5 shadow-lg hover:shadow-[0_10px_30px_rgba(0,180,216,0.2)] transition-all duration-300 hover:scale-105 border border-white/60 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative">
+                <div class="w-12 h-12 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-black text-gray-900 mb-2 group-hover:text-[#0077B6] transition-colors duration-300">
+                  Innovation First
+                </h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Cutting-edge solutions with the latest technology
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-5 shadow-lg hover:shadow-[0_10px_30px_rgba(0,119,182,0.2)] transition-all duration-300 hover:scale-105 border border-white/60 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative">
+                <div class="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#0D3B66] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-md">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-black text-gray-900 mb-2 group-hover:text-[#0077B6] transition-colors duration-300">
+                  Quality Assured
+                </h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  High standards and attention to every detail
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-5 shadow-lg hover:shadow-[0_10px_30px_rgba(0,180,216,0.2)] transition-all duration-300 hover:scale-105 border border-white/60 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative">
+                <div class="w-12 h-12 bg-gradient-to-br from-[#00B4D8] to-[#0D3B66] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-black text-gray-900 mb-2 group-hover:text-[#0077B6] transition-colors duration-300">
+                  Fast Delivery
+                </h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Rapid development without compromising quality
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-5 shadow-lg hover:shadow-[0_10px_30px_rgba(0,119,182,0.2)] transition-all duration-300 hover:scale-105 border border-white/60 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative">
+                <div class="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B4D8] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-md">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-black text-gray-900 mb-2 group-hover:text-[#0077B6] transition-colors duration-300">
+                  Dedicated Team
+                </h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Experienced professionals committed to your success
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Vision Statement -->
+          <div class="relative bg-gradient-to-br from-[#00B4D8]/10 via-[#0077B6]/5 to-transparent rounded-2xl p-6 border border-[#00B4D8]/20">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-black text-gray-900 mb-2">Our Vision</h4>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                  To become a <span class="font-bold text-[#0077B6]">trusted partner</span> in the digital transformation journey, helping businesses grow with cutting-edge technology and sustainable solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="pt-4 flex justify-center lg:justify-start">
+            <a
+              href="/Company_Profile_Kandelatech.pdf"
+              download
+              class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] text-white rounded-full px-8 py-4 text-base font-bold shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:shadow-[0_0_50px_rgba(0,180,216,0.6)] hover:scale-105 transition-all duration-300 overflow-hidden"
+            >
+              <span class="absolute inset-0 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <svg class="relative z-10 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              <span class="relative z-10">Download Company Profile</span>
+            </a>
+          </div>
+
+        </div>
+      </AnimatedContent>
+
+    </div>
+
+    <!-- Bottom Technology & Expertise Section -->
+    <AnimatedContent
+      distance={50}
+      direction="vertical"
+      reverse={false}
+      duration={1.5}
+      ease="power2.out"
+      initialOpacity={0}
+      animateOpacity
+      delay={0.6}
+      client:load
+    >
+      <div class="relative bg-white/70 backdrop-blur-xl rounded-3xl p-8 lg:p-12 shadow-lg border border-white/60 overflow-hidden group/tech">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#00B4D8]/10 to-transparent rounded-full blur-3xl group-hover/tech:scale-150 transition-transform duration-700"></div>
+        <div class="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-[#0077B6]/10 to-transparent rounded-full blur-3xl group-hover/tech:scale-150 transition-transform duration-700"></div>
+        
+        <!-- Animated Border on Hover -->
+        <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover/tech:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+        
+        <div class="relative">
+          <div class="text-center mb-10">
+            <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3">
+              Our Technology Stack & Expertise
+            </h3>
+            <p class="text-base text-gray-600 max-w-2xl mx-auto">
+              We leverage cutting-edge technologies and proven methodologies to deliver exceptional digital solutions
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Tech Category 1: Frontend -->
+            <div class="group/item relative bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/80">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center shadow-lg group-hover/item:rotate-12 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-lg font-black text-gray-900">Frontend Development</h4>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">React</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Next.js</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Vue.js</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Astro</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Tailwind</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Category 2: Backend -->
+            <div class="group/item relative bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/80">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#0D3B66] rounded-xl flex items-center justify-center shadow-lg group-hover/item:rotate-12 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-lg font-black text-gray-900">Backend Development</h4>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">Node.js</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">Python</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">Go</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">PostgreSQL</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">MongoDB</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Category 3: Blockchain -->
+            <div class="group/item relative bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/80">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#00B4D8] to-[#0D3B66] rounded-xl flex items-center justify-center shadow-lg group-hover/item:rotate-12 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-lg font-black text-gray-900">Blockchain & Web3</h4>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Solidity</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Ethereum</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Polygon</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Web3.js</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Smart Contracts</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Category 4: Mobile -->
+            <div class="group/item relative bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/80">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B4D8] rounded-xl flex items-center justify-center shadow-lg group-hover/item:rotate-12 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-lg font-black text-gray-900">Mobile Development</h4>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">React Native</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">Flutter</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">iOS</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">Android</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0077B6] hover:bg-[#0077B6]/10 transition-all duration-200">PWA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Category 5: Cloud & DevOps -->
+            <div class="group/item relative bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/80">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center shadow-lg group-hover/item:rotate-12 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-lg font-black text-gray-900">Cloud & DevOps</h4>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">AWS</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Google Cloud</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Docker</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">Kubernetes</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#00B4D8] hover:bg-[#00B4D8]/10 transition-all duration-200">CI/CD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Category 6: Design & UX -->
+            <div class="group/item relative bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/80">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/5 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-[#0D3B66] to-[#00B4D8] rounded-xl flex items-center justify-center shadow-lg group-hover/item:rotate-12 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-lg font-black text-gray-900">Design & UX</h4>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0D3B66]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0D3B66] hover:bg-[#0D3B66]/10 transition-all duration-200">Figma</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0D3B66]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0D3B66] hover:bg-[#0D3B66]/10 transition-all duration-200">Adobe XD</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0D3B66]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0D3B66] hover:bg-[#0D3B66]/10 transition-all duration-200">UI/UX Design</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0D3B66]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0D3B66] hover:bg-[#0D3B66]/10 transition-all duration-200">Prototyping</span>
+                  <span class="px-3 py-1.5 bg-white/80 border border-[#0D3B66]/30 rounded-full text-xs font-semibold text-gray-700 hover:border-[#0D3B66] hover:bg-[#0D3B66]/10 transition-all duration-200">Branding</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </AnimatedContent>
+
+  </div>
+</section>
+
+<style>
+  /* Floating Animations */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+
+  @keyframes float-delay {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(-5deg);
+    }
+  }
+
+  @keyframes gradient-x {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delay {
+    animation: float-delay 8s ease-in-out infinite;
+  }
+
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 3s ease infinite;
+  }
+</style>

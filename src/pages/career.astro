@@ -1,0 +1,423 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/v2/Footer.astro";
+import AnimatedContent from "../components/reactbits/AnimatedContent";
+import BlurText from "../components/reactbits/BlurText";
+import ScrollVelocity from "../components/reactbits/ScrollVelocity";
+---
+
+<Layout title="Career - Kandela Technology">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white">
+    <!-- Decorative Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <!-- Gradient Orbs -->
+      <div class="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-[#00B4D8]/20 to-transparent rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-br from-[#0077B6]/20 to-transparent rounded-full blur-3xl animate-float-delay"></div>
+      
+      <!-- Floating Shapes -->
+      <div class="absolute top-40 left-20 w-20 h-20 border-2 border-[#00B4D8]/30 rounded-lg rotate-12 animate-float"></div>
+      <div class="absolute bottom-40 right-32 w-24 h-24 border-2 border-[#0077B6]/30 rounded-full animate-float-delay"></div>
+      <div class="absolute top-1/2 right-20 w-16 h-16 border-2 border-[#00B4D8]/30 rotate-45 animate-float" style="animation-delay: 1s;"></div>
+    </div>
+
+    <!-- Animated ScrollVelocity Background Text -->
+    <div class="absolute top-1/2 left-0 right-0 -translate-y-1/2 opacity-5 pointer-events-none overflow-hidden">
+      <ScrollVelocity 
+        texts={["JOIN OUR TEAM", "BUILD THE FUTURE", "GROW WITH US"]} 
+        velocity={2}
+        className="text-6xl lg:text-9xl font-black text-gray-900"
+        client:load 
+      />
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <AnimatedContent
+          distance={30}
+          direction="vertical"
+          reverse={false}
+          duration={1}
+          ease="power2.out"
+          initialOpacity={0}
+          animateOpacity
+          delay={0}
+          client:load
+        >
+          <div class="inline-flex items-center gap-2 bg-white/60 backdrop-blur-md border border-[#00B4D8]/30 rounded-full px-6 py-2 mb-6 shadow-lg">
+            <span class="w-2 h-2 bg-[#00B4D8] rounded-full animate-pulse"></span>
+            <span class="text-[#0D3B66] text-sm font-semibold">Career Opportunities</span>
+          </div>
+        </AnimatedContent>
+
+        <!-- Main Heading -->
+        <div class="mb-6">
+          <BlurText
+            text="Build Your Future With Us"
+            delay={100}
+            animateBy="words"
+            direction="top"
+            className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-4 [text-shadow:_0_2px_20px_rgb(0_180_216_/_20%)] justify-center"
+            client:load
+          />
+        </div>
+
+        <!-- Description -->
+        <AnimatedContent
+          distance={30}
+          direction="vertical"
+          reverse={false}
+          duration={1.2}
+          ease="power2.out"
+          initialOpacity={0}
+          animateOpacity
+          delay={0.3}
+          client:load
+        >
+          <p class="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8">
+            Join our innovative team and be part of creating cutting-edge solutions that shape the future of technology.
+          </p>
+        </AnimatedContent>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Join Us Section -->
+  <section class="relative py-16 lg:py-24 overflow-hidden bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0}
+        client:load
+      >
+        <div class="text-center mb-12 lg:mb-16">
+          <div class="inline-flex items-center gap-2 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 backdrop-blur-sm border border-[#00B4D8]/20 rounded-full px-6 py-2 mb-6">
+            <svg class="w-5 h-5 text-[#0077B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            <span class="text-[#0D3B66] text-sm font-bold">Why Kandela</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+            Why Join Our Team?
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            We offer more than just a job – we provide a platform for growth, innovation, and impact.
+          </p>
+        </div>
+      </AnimatedContent>
+
+      <!-- Benefits Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Benefit 1 -->
+        <AnimatedContent
+          distance={50}
+          direction="vertical"
+          reverse={false}
+          duration={1.5}
+          ease="power2.out"
+          initialOpacity={0}
+          animateOpacity
+          delay={0.1}
+          client:load
+        >
+          <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 lg:p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative">
+              <div class="w-14 h-14 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-2">Continuous Learning</h3>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                Access to training programs, workshops, and resources to enhance your skills and stay ahead in technology.
+              </p>
+            </div>
+          </div>
+        </AnimatedContent>
+
+        <!-- Benefit 2 -->
+        <AnimatedContent
+          distance={50}
+          direction="vertical"
+          reverse={false}
+          duration={1.5}
+          ease="power2.out"
+          initialOpacity={0}
+          animateOpacity
+          delay={0.2}
+          client:load
+        >
+          <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 lg:p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative">
+              <div class="w-14 h-14 bg-gradient-to-br from-[#0077B6] to-[#0D3B66] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-2">Collaborative Culture</h3>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                Work with talented professionals in a supportive environment that values teamwork and innovation.
+              </p>
+            </div>
+          </div>
+        </AnimatedContent>
+
+        <!-- Benefit 3 -->
+        <AnimatedContent
+          distance={50}
+          direction="vertical"
+          reverse={false}
+          duration={1.5}
+          ease="power2.out"
+          initialOpacity={0}
+          animateOpacity
+          delay={0.3}
+          client:load
+        >
+          <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 lg:p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative">
+              <div class="w-14 h-14 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-2">Career Growth</h3>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                Clear career progression paths with opportunities to take on leadership roles and challenging projects.
+              </p>
+            </div>
+          </div>
+        </AnimatedContent>
+
+        <!-- Benefit 4 -->
+        <AnimatedContent
+          distance={50}
+          direction="vertical"
+          reverse={false}
+          duration={1.5}
+          ease="power2.out"
+          initialOpacity={0}
+          animateOpacity
+          delay={0.4}
+          client:load
+        >
+          <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 lg:p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative">
+              <div class="w-14 h-14 bg-gradient-to-br from-[#0077B6] to-[#0D3B66] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-2">Work-Life Balance</h3>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                Flexible working arrangements and a culture that respects your time and personal commitments.
+              </p>
+            </div>
+          </div>
+        </AnimatedContent>
+
+        <!-- Benefit 5 -->
+        <AnimatedContent
+          distance={50}
+          direction="vertical"
+          reverse={false}
+          duration={1.5}
+          ease="power2.out"
+          initialOpacity={0}
+          animateOpacity
+          delay={0.5}
+          client:load
+        >
+          <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 lg:p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative">
+              <div class="w-14 h-14 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-2">Innovative Projects</h3>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                Work on cutting-edge technologies including Web3, blockchain, and modern web applications.
+              </p>
+            </div>
+          </div>
+        </AnimatedContent>
+
+        <!-- Benefit 6 -->
+        <AnimatedContent
+          distance={50}
+          direction="vertical"
+          reverse={false}
+          duration={1.5}
+          ease="power2.out"
+          initialOpacity={0}
+          animateOpacity
+          delay={0.6}
+          client:load
+        >
+          <div class="group relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 lg:p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative">
+              <div class="w-14 h-14 bg-gradient-to-br from-[#0077B6] to-[#0D3B66] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 mb-2">Competitive Package</h3>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                Attractive salary, benefits, and performance-based incentives that recognize your contributions.
+              </p>
+            </div>
+          </div>
+        </AnimatedContent>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Openings Section -->
+  <section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50">
+    <!-- Decorative Background -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-[#00B4D8]/10 to-transparent rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-br from-[#0077B6]/10 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0}
+        client:load
+      >
+        <div class="text-center mb-12 lg:mb-16">
+          <div class="inline-flex items-center gap-2 bg-white/60 backdrop-blur-md border border-[#00B4D8]/30 rounded-full px-6 py-2 mb-6 shadow-lg">
+            <svg class="w-5 h-5 text-[#0077B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <span class="text-[#0D3B66] text-sm font-bold">Current Openings</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+            Open Positions
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            Explore our current job opportunities and find your perfect role.
+          </p>
+        </div>
+      </AnimatedContent>
+
+      <!-- No Openings Card -->
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.2}
+        client:load
+      >
+        <div class="max-w-3xl mx-auto">
+          <div class="relative bg-white/70 backdrop-blur-xl rounded-3xl p-10 lg:p-16 border border-gray-200 shadow-2xl text-center">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#00B4D8]/10 to-transparent rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-[#0077B6]/10 to-transparent rounded-full blur-3xl"></div>
+            
+            <div class="relative">
+              <!-- Icon -->
+              <div class="w-20 h-20 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+
+              <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-4">
+                No Current Openings
+              </h3>
+              <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-xl mx-auto">
+                We don't have any open positions at the moment, but we're always looking for talented individuals to join our team.
+              </p>
+
+              <!-- CTA -->
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="mailto:hello@kandela.tech?subject=Career Inquiry"
+                  class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] text-white rounded-full px-8 py-4 text-base font-bold shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:shadow-[0_0_50px_rgba(0,180,216,0.6)] hover:scale-105 transition-all duration-300 overflow-hidden"
+                >
+                  <span class="absolute inset-0 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <svg class="relative z-10 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                  <span class="relative z-10">Send Your CV</span>
+                </a>
+                <a
+                  href="/"
+                  class="group relative inline-flex items-center justify-center gap-3 bg-white text-gray-900 rounded-full px-8 py-4 text-base font-bold border-2 border-gray-300 hover:border-[#00B4D8] hover:bg-gray-50 transition-all duration-300"
+                >
+                  <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                  </svg>
+                  <span>Back to Home</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedContent>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Floating Animations */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+
+  @keyframes float-delay {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(-5deg);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delay {
+    animation: float-delay 8s ease-in-out infinite;
+  }
+</style>
+

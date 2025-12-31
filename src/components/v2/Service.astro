@@ -1,0 +1,402 @@
+---
+import ScrollVelocity from "../reactbits/ScrollVelocity";
+import AnimatedContent from "../reactbits/AnimatedContent";
+---
+
+<section class="relative bg-gradient-to-br from-white via-gray-50 to-white py-20 lg:py-32 overflow-hidden" id="service">
+  <!-- Decorative Background Elements -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <!-- Gradient Orbs -->
+    <div class="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-[#00B4D8]/10 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-40 left-10 w-80 h-80 bg-gradient-to-br from-[#0077B6]/10 to-transparent rounded-full blur-3xl"></div>
+    
+    <!-- Floating Shapes -->
+    <div class="absolute top-40 left-20 w-16 h-16 border-2 border-[#00B4D8]/20 rounded-lg rotate-12 animate-float"></div>
+    <div class="absolute bottom-60 right-32 w-20 h-20 border-2 border-[#0077B6]/20 rounded-full animate-float-delay"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0}
+        client:load
+      >
+        <div class="inline-flex items-center gap-2 bg-white/60 backdrop-blur-md border border-[#00B4D8]/30 rounded-full px-6 py-2 mb-6 shadow-lg">
+          <span class="w-2 h-2 bg-[#00B4D8] rounded-full animate-pulse"></span>
+          <span class="text-[#0D3B66] text-sm font-semibold">Our Services</span>
+        </div>
+      </AnimatedContent>
+
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.1}
+        client:load
+      >
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6 [text-shadow:_0_2px_20px_rgb(0_180_216_/_20%)]">
+          Discover Our Comprehensive Services
+        </h2>
+      </AnimatedContent>
+
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.2}
+        client:load
+      >
+        <p class="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          At Kandela Technology, we illuminate your digital aspirations with
+          cutting-edge solutions designed for the modern world.
+        </p>
+      </AnimatedContent>
+    </div>
+
+    <!-- Compact Services Grid - 2 Columns -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Service Card 1: Web3 Development -->
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power3.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.3}
+        client:load
+      >
+        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.2)] transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 h-full flex flex-col">
+          <!-- Animated Gradient Border -->
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+          
+          <!-- Glowing Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/20 via-transparent to-[#0077B6]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Floating Shapes -->
+          <div class="absolute top-10 right-10 w-20 h-20 bg-[#00B4D8]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="absolute bottom-10 left-10 w-16 h-16 bg-[#0077B6]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          
+          <!-- Image Header -->
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/40 to-[#0077B6]/40 mix-blend-overlay z-10 group-hover:from-[#00B4D8]/60 group-hover:to-[#0077B6]/60 transition-all duration-500"></div>
+            <img
+              class="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700"
+              src="/web3.webp"
+              alt="Web3 Development"
+            />
+            <!-- Animated Rays -->
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+              <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,180,216,0.5)_50%,transparent_75%)] bg-[length:250%_250%] animate-shimmer"></div>
+            </div>
+            
+            <!-- Number Badge -->
+            <div class="absolute top-4 right-4 z-20 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#00B4D8] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <span class="text-2xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">01</span>
+            </div>
+            
+            <!-- Icon Badge -->
+            <div class="absolute top-4 left-4 z-20">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-2xl blur-lg opacity-50 group-hover:opacity-100 animate-pulse"></div>
+              <div class="relative w-16 h-16 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                <svg class="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 relative flex-1 flex flex-col">
+            <h3 class="text-2xl font-black text-gray-900 mb-3 group-hover:text-[#0077B6] transition-colors duration-300">
+              Web3 Development
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4 flex-1">
+              Blockchain and web3-based solutions including NFT, DeFi, DAO, and smart contracts to help your business stay ahead.
+            </p>
+            
+            <!-- Mini Features -->
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#00B4D8] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#00B4D8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                Secure
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#00B4D8] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#00B4D8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Fast
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#00B4D8] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#00B4D8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                Reliable
+              </span>
+            </div>
+          </div>
+        </div>
+      </AnimatedContent>
+
+      <!-- Service Card 2: Website & App Development -->
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power3.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.4}
+        client:load
+      >
+        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.2)] transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 h-full flex flex-col">
+          <!-- Animated Gradient Border -->
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+          
+          <!-- Glowing Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/20 via-transparent to-[#00B4D8]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Floating Shapes -->
+          <div class="absolute top-10 left-10 w-20 h-20 bg-[#0077B6]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="absolute bottom-10 right-10 w-16 h-16 bg-[#00B4D8]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          
+          <!-- Image Header -->
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/40 to-[#00B4D8]/40 mix-blend-overlay z-10 group-hover:from-[#0077B6]/60 group-hover:to-[#00B4D8]/60 transition-all duration-500"></div>
+            <img
+              class="w-full h-full object-cover group-hover:scale-125 group-hover:-rotate-2 transition-all duration-700"
+              src="/webandapp.webp"
+              alt="Website and Application Development"
+            />
+            <!-- Animated Rays -->
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+              <div class="absolute inset-0 bg-[linear-gradient(-45deg,transparent_25%,rgba(0,119,182,0.5)_50%,transparent_75%)] bg-[length:250%_250%] animate-shimmer"></div>
+            </div>
+            
+            <!-- Number Badge -->
+            <div class="absolute top-4 left-4 z-20 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0077B6] group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+              <span class="text-2xl font-black bg-gradient-to-br from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">02</span>
+            </div>
+            
+            <!-- Icon Badge -->
+            <div class="absolute top-4 right-4 z-20">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6] to-[#00B4D8] rounded-2xl blur-lg opacity-50 group-hover:opacity-100 animate-pulse"></div>
+              <div class="relative w-16 h-16 bg-gradient-to-br from-[#0077B6] to-[#00B4D8] rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                <svg class="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 relative flex-1 flex flex-col">
+            <h3 class="text-2xl font-black text-gray-900 mb-3 group-hover:text-[#0077B6] transition-colors duration-300">
+              Website & App Development
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4 flex-1">
+              Design and develop websites and applications tailored to your needs, ensuring functionality, scalability, and optimal UX.
+            </p>
+            
+            <!-- Mini Features -->
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#0077B6] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#0077B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Responsive
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#0077B6] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#0077B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                Modern UI
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#0077B6] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#0077B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                Scalable
+              </span>
+            </div>
+          </div>
+        </div>
+      </AnimatedContent>
+
+      <!-- Service Card 3: Custom Software Development -->
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power3.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.5}
+        client:load
+      >
+        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(13,59,102,0.2)] transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 h-full flex flex-col">
+          <!-- Animated Gradient Border -->
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0D3B66] via-[#0077B6] to-[#0D3B66] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+          
+          <!-- Glowing Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/20 via-transparent to-[#0077B6]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Floating Shapes -->
+          <div class="absolute top-10 right-10 w-20 h-20 bg-[#0D3B66]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="absolute bottom-10 left-10 w-16 h-16 bg-[#0077B6]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          
+          <!-- Image Header -->
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/40 to-[#0077B6]/40 mix-blend-overlay z-10 group-hover:from-[#0D3B66]/60 group-hover:to-[#0077B6]/60 transition-all duration-500"></div>
+            <img
+              class="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700"
+              src="/custom.webp"
+              alt="Custom Software Development"
+            />
+            <!-- Animated Rays -->
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+              <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(13,59,102,0.5)_50%,transparent_75%)] bg-[length:250%_250%] animate-shimmer"></div>
+            </div>
+            
+            <!-- Number Badge -->
+            <div class="absolute top-4 right-4 z-20 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0D3B66] group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <span class="text-2xl font-black bg-gradient-to-br from-[#0D3B66] to-[#0077B6] bg-clip-text text-transparent">03</span>
+            </div>
+            
+            <!-- Icon Badge -->
+            <div class="absolute top-4 left-4 z-20">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66] to-[#0077B6] rounded-2xl blur-lg opacity-50 group-hover:opacity-100 animate-pulse"></div>
+              <div class="relative w-16 h-16 bg-gradient-to-br from-[#0D3B66] to-[#0077B6] rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                <svg class="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 relative flex-1 flex flex-col">
+            <h3 class="text-2xl font-black text-gray-900 mb-3 group-hover:text-[#0D3B66] transition-colors duration-300">
+              Custom Software Development
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4 flex-1">
+              Bespoke software solutions addressing unique business challenges, including custom ERP, CRM, and internal applications.
+            </p>
+            
+            <!-- Mini Features -->
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#0D3B66]/10 to-[#0077B6]/10 border border-[#0D3B66]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#0D3B66] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#0D3B66]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                Tailored
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#0D3B66]/10 to-[#0077B6]/10 border border-[#0D3B66]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#0D3B66] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#0D3B66]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                Integrated
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#0D3B66]/10 to-[#0077B6]/10 border border-[#0D3B66]/30 rounded-full text-xs font-semibold text-gray-800 hover:border-[#0D3B66] hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-[#0D3B66]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                Support
+              </span>
+            </div>
+          </div>
+        </div>
+      </AnimatedContent>
+
+      <!-- Service Card 4: IT Staffing Solutions - NEW -->
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={1.5}
+        ease="power3.out"
+        initialOpacity={0}
+        animateOpacity
+        delay={0.6}
+        client:load
+      >
+        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(6,182,212,0.2)] transition-all duration-500 hover:scale-[1.05] hover:-translate-y-2 h-full flex flex-col">
+          <!-- Animated Gradient Border -->
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400 via-[#00B4D8] to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+          
+          <!-- Glowing Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-transparent to-[#00B4D8]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Floating Shapes -->
+          <div class="absolute top-10 left-10 w-20 h-20 bg-cyan-400/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="absolute bottom-10 right-10 w-16 h-16 bg-[#00B4D8]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          
+          <!-- NEW Badge -->
+          <div class="absolute top-4 right-4 z-30 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-black px-4 py-1.5 rounded-full shadow-lg animate-pulse">
+            NEW
+          </div>
+
+          <!-- Image Header -->
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/40 to-[#00B4D8]/40 mix-blend-overlay z-10 group-hover:from-cyan-400/60 group-hover:to-[#00B4D8]/60 transition-all duration-500"></div>
+            <img
+              class="w-full h-full object-cover group-hover:scale-125 group-hover:-rotate-2 transition-all duration-700"
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
+              alt="IT Staffing Solutions"
+            />
+            <!-- Animated Rays -->
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+              <div class="absolute inset-0 bg-[linear-gradient(-45deg,transparent_25%,rgba(6,182,212,0.5)_50%,transparent_75%)] bg-[length:250%_250%] animate-shimmer"></div>
+            </div>
+            
+            <!-- Number Badge -->
+            <div class="absolute top-4 left-4 z-20 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-cyan-400 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+              <span class="text-2xl font-black bg-gradient-to-br from-cyan-500 to-[#00B4D8] bg-clip-text text-transparent">04</span>
+            </div>
+            
+            <!-- Icon Badge -->
+            <div class="absolute bottom-4 right-4 z-20">
+              <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-[#00B4D8] rounded-2xl blur-lg opacity-50 group-hover:opacity-100 animate-pulse"></div>
+              <div class="relative w-16 h-16 bg-gradient-to-br from-cyan-400 to-[#00B4D8] rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                <svg class="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 relative flex-1 flex flex-col">
+            <h3 class="text-2xl font-black text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors duration-300">
+              IT Staffing Solutions
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4 flex-1">
+              Scale your team instantly with top-tier IT professionals. Skilled developers, designers, and tech specialists who integrate seamlessly.
+            </p>
+            
+            <!-- Mini Features -->
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-cyan-400/10 to-[#00B4D8]/10 border border-cyan-400/30 rounded-full text-xs font-semibold text-gray-800 hover:border-cyan-500 hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Rapid Deploy
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-cyan-400/10 to-[#00B4D8]/10 border border-cyan-400/30 rounded-full text-xs font-semibold text-gray-800 hover:border-cyan-500 hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                Top Talent
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-cyan-400/10 to-[#00B4D8]/10 border border-cyan-400/30 rounded-full text-xs font-semibold text-gray-800 hover:border-cyan-500 hover:scale-105 transition-all">
+                <svg class="w-3.5 h-3.5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Flexible
+              </span>
+            </div>
+          </div>
+        </div>
+      </AnimatedContent>
+
+    </div>
+  </div>
+</section>

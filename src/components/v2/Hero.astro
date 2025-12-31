@@ -1,0 +1,493 @@
+---
+import LiquidEither from "../reactbits/LiquidEither";
+
+import BlurText from "../reactbits/BlurText";
+import AnimatedContent from "../reactbits/AnimatedContent";
+
+const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+};
+---
+
+<section
+    class="relative w-full min-h-screen flex items-center justify-center bg-white overflow-hidden"
+>
+    <!-- Background Effect -->
+    <div class="absolute inset-0 z-0">
+        <LiquidEither colors={["#00B4D8", "#00B4D8", "#ffffff"]} client:load />
+    </div>
+
+    <!-- Floating Decorative Elements -->
+    <div class="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
+        <!-- Gradient Orbs -->
+        <div
+            class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-[#00B4D8]/30 to-transparent rounded-full blur-3xl animate-pulse"
+        >
+        </div>
+        <div
+            class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-[#0077B6]/20 to-transparent rounded-full blur-3xl animate-pulse"
+            style="animation-delay: 1s;"
+        >
+        </div>
+
+        <!-- Floating Shapes -->
+        <div
+            class="absolute top-20 left-10 w-20 h-20 border-4 border-[#00B4D8]/30 rounded-lg rotate-12 animate-float"
+        >
+        </div>
+        <div
+            class="absolute top-40 right-20 w-16 h-16 bg-gradient-to-br from-[#00B4D8]/20 to-[#0077B6]/20 rounded-full animate-float-delay"
+        >
+        </div>
+        <div
+            class="absolute bottom-40 left-20 w-12 h-12 border-4 border-[#0077B6]/30 rounded-full animate-float"
+            style="animation-delay: 2s;"
+        >
+        </div>
+        <div
+            class="absolute bottom-20 right-40 w-24 h-24 border-4 border-[#00B4D8]/20 rotate-45 animate-float-delay"
+        >
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div
+        class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-0"
+    >
+        <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-16 min-h-screen"
+        >
+            <!-- Left Content -->
+            <div class="flex-1 w-full lg:w-auto pt-16 sm:pt-20 lg:pt-0">
+                <!-- Badge -->
+                <AnimatedContent
+                    distance={50}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1.5}
+                    ease="power2.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    delay={0}
+                    client:load
+                >
+                    <div class="flex justify-center lg:justify-start mb-4 sm:mb-6">
+                        <div
+                            class="inline-flex items-center gap-2 bg-white/60 backdrop-blur-md border border-[#00B4D8]/30 rounded-full px-4 sm:px-6 py-2 shadow-lg"
+                        >
+                            <span
+                                class="w-2 h-2 bg-[#00B4D8] rounded-full animate-pulse"
+                            ></span>
+                            <span class="text-[#0D3B66] text-xs sm:text-sm font-semibold"
+                                >Welcome to Kandela Technology</span
+                            >
+                        </div>
+                    </div>
+                </AnimatedContent>
+
+                <!-- Main Heading -->
+                <div class="mb-4 sm:mb-6 relative">
+                    <!-- Glow effect behind text -->
+                    <div
+                        class="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#00B4D8]/20 via-[#0077B6]/20 to-transparent blur-3xl opacity-50"
+                    >
+                    </div>
+                    <div class="lg:text-left text-center">
+                        <BlurText
+                            text="Your Guiding Light in Innovation."
+                            delay={200}
+                            animateBy="words"
+                            direction="top"
+                            onAnimationComplete={handleAnimationComplete}
+                            className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-tight justify-center lg:justify-start"
+                            client:load
+                        />
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
+                    <div class="lg:text-left text-center">
+                        <BlurText
+                            text="Consistent and reliable innovative solutions, meticulously crafted to illuminate and fulfill your every complex digital need, paving the way for a brighter technological future."
+                            delay={300}
+                            animateBy="words"
+                            direction="top"
+                            onAnimationComplete={handleAnimationComplete}
+                            className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed justify-center lg:justify-start"
+                            client:load
+                        />
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div
+                    class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 justify-center lg:justify-start"
+                >
+                    <AnimatedContent
+                        distance={100}
+                        direction="horizontal"
+                        reverse={false}
+                        duration={2}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.4}
+                        client:load
+                    >
+                        <a
+                            href="/Company_Profile_Kandelatech.pdf"
+                            download
+                            class="group relative bg-gradient-to-r from-[#00B4D8] to-[#0D3B66] text-white rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:shadow-[0_0_50px_rgba(0,180,216,0.6)] hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-2 overflow-hidden w-full sm:w-auto"
+                        >
+                            <span
+                                class="absolute inset-0 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            ></span>
+                            <span class="relative z-10">Grab Our Story</span>
+                            <svg
+                                class="relative z-10 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </AnimatedContent>
+
+                    <AnimatedContent
+                        distance={100}
+                        direction="horizontal"
+                        reverse={false}
+                        duration={2}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.5}
+                        client:load
+                    >
+                        <a
+                            href="/#service"
+                            class="group relative border-2 border-[#0077B6] text-[#0077B6] rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold hover:text-white transition-all duration-300 inline-flex items-center justify-center gap-2 overflow-hidden w-full sm:w-auto"
+                        >
+                            <span
+                                class="absolute inset-0 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+                            ></span>
+                            <span class="relative z-10">Explore Services</span>
+                            <svg
+                                class="relative z-10 w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </AnimatedContent>
+                </div>
+
+                <!-- Stats -->
+                <AnimatedContent
+                    distance={50}
+                    direction="vertical"
+                    reverse={false}
+                    duration={2}
+                    ease="power2.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    delay={0.6}
+                    client:load
+                >
+                    <div
+                        class="grid grid-cols-3 gap-3 sm:gap-6 max-w-xl mx-auto lg:mx-0"
+                    >
+                        <div
+                            class="group text-center lg:text-left p-2 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-white/40 backdrop-blur-sm transition-all duration-300 cursor-default"
+                        >
+                            <div
+                                class="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300"
+                            >
+                                50+
+                            </div>
+                            <div class="text-xs sm:text-sm text-gray-600 font-semibold">
+                                Projects
+                            </div>
+                        </div>
+                        <div
+                            class="group text-center lg:text-left p-2 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-white/40 backdrop-blur-sm transition-all duration-300 cursor-default"
+                        >
+                            <div
+                                class="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#0077B6] to-[#0D3B66] bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300"
+                            >
+                                30+
+                            </div>
+                            <div class="text-xs sm:text-sm text-gray-600 font-semibold">
+                                Clients
+                            </div>
+                        </div>
+                        <div
+                            class="group text-center lg:text-left p-2 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-white/40 backdrop-blur-sm transition-all duration-300 cursor-default"
+                        >
+                            <div
+                                class="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#00B4D8] to-[#0D3B66] bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300"
+                            >
+                                5+
+                            </div>
+                            <div class="text-xs sm:text-sm text-gray-600 font-semibold">
+                                Years
+                            </div>
+                        </div>
+                    </div>
+                </AnimatedContent>
+            </div>
+
+            <!-- Right Content - Feature Cards -->
+            <div class="flex-1 w-full lg:w-auto hidden lg:block">
+                <AnimatedContent
+                    distance={100}
+                    direction="horizontal"
+                    reverse={true}
+                    duration={2.5}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    delay={0.7}
+                    client:load
+                >
+                    <div class="grid grid-cols-2 gap-4 max-w-lg ml-auto">
+                        <!-- Card 1 -->
+                        <div
+                            class="group relative bg-white/60 backdrop-blur-lg border border-white/80 rounded-2xl p-4 shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.25)] hover:scale-105 hover:border-[#00B4D8]/50 transition-all duration-300 overflow-hidden"
+                        >
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            >
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="w-11 h-11 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md"
+                                >
+                                    <svg
+                                        class="w-5 h-5 text-white"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-base font-bold text-gray-900 mb-1.5 group-hover:text-[#0077B6] transition-colors duration-300"
+                                >
+                                    Innovative
+                                </h3>
+                                <p
+                                    class="text-xs text-gray-600 leading-relaxed"
+                                >
+                                    Cutting-edge tech solutions
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="group relative bg-white/60 backdrop-blur-lg border border-white/80 rounded-2xl p-4 shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.25)] hover:scale-105 hover:border-[#0077B6]/50 transition-all duration-300 overflow-hidden"
+                        >
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            >
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="w-11 h-11 bg-gradient-to-br from-[#0077B6] to-[#0D3B66] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-md"
+                                >
+                                    <svg
+                                        class="w-5 h-5 text-white"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-base font-bold text-gray-900 mb-1.5 group-hover:text-[#0077B6] transition-colors duration-300"
+                                >
+                                    Fast Delivery
+                                </h3>
+                                <p
+                                    class="text-xs text-gray-600 leading-relaxed"
+                                >
+                                    Rapid development cycle
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div
+                            class="group relative bg-white/60 backdrop-blur-lg border border-white/80 rounded-2xl p-4 shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.25)] hover:scale-105 hover:border-[#00B4D8]/50 transition-all duration-300 overflow-hidden"
+                        >
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            >
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="w-11 h-11 bg-gradient-to-br from-[#00B4D8] to-[#0D3B66] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md"
+                                >
+                                    <svg
+                                        class="w-5 h-5 text-white"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-base font-bold text-gray-900 mb-1.5 group-hover:text-[#0077B6] transition-colors duration-300"
+                                >
+                                    Secure
+                                </h3>
+                                <p
+                                    class="text-xs text-gray-600 leading-relaxed"
+                                >
+                                    Enterprise-grade security
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div
+                            class="group relative bg-white/60 backdrop-blur-lg border border-white/80 rounded-2xl p-4 shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.25)] hover:scale-105 hover:border-[#0077B6]/50 transition-all duration-300 overflow-hidden"
+                        >
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            >
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="w-11 h-11 bg-gradient-to-br from-[#0077B6] to-[#00B4D8] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-md"
+                                >
+                                    <svg
+                                        class="w-5 h-5 text-white"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-base font-bold text-gray-900 mb-1.5 group-hover:text-[#0077B6] transition-colors duration-300"
+                                >
+                                    Scalable
+                                </h3>
+                                <p
+                                    class="text-xs text-gray-600 leading-relaxed"
+                                >
+                                    Growth-ready architecture
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </AnimatedContent>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator - Hidden on mobile -->
+    <div
+        class="hidden sm:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce"
+    >
+        <a
+            href="#service"
+            class="flex flex-col items-center gap-2 text-gray-700 hover:text-[#00B4D8] transition-colors duration-300 group"
+        >
+            <span class="text-sm font-semibold">Scroll Down</span>
+            <div
+                class="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center p-2"
+            >
+                <div class="w-1 h-3 bg-current rounded-full animate-scroll">
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<style>
+    /* Floating Animations */
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate(5deg);
+        }
+    }
+
+    @keyframes float-delay {
+        0%,
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-30px) rotate(-5deg);
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(12px);
+            opacity: 0;
+        }
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-float-delay {
+        animation: float-delay 8s ease-in-out infinite;
+    }
+
+    .animate-scroll {
+        animation: scroll 2s ease-in-out infinite;
+    }
+</style>
