@@ -2,6 +2,9 @@
 import AnimatedContent from "../reactbits/AnimatedContent";
 import BlurText from "../reactbits/BlurText";
 import ScrollVelocity from "../reactbits/ScrollVelocity";
+
+// Get current year
+const currentYear = new Date().getFullYear();
 ---
 
 <footer id="footer" class="relative bg-gradient-to-br from-white via-gray-50 to-white py-20 lg:py-32 overflow-hidden">
@@ -371,7 +374,7 @@ import ScrollVelocity from "../reactbits/ScrollVelocity";
           <!-- Copyright -->
           <div class="text-center md:text-left">
             <p class="text-sm text-gray-700 font-medium">
-              &copy; 2025 <span class="font-black text-gray-900">Kandela Technology</span>. All rights reserved.
+              &copy; {currentYear} <span class="font-black text-gray-900">Kandela Technology</span>. All rights reserved.
             </p>
           </div>
 
