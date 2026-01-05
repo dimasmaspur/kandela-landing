@@ -5,6 +5,7 @@ import Footer from "../components/v2/Footer.astro";
 import AnimatedContent from "../components/reactbits/AnimatedContent";
 import BlurText from "../components/reactbits/BlurText";
 import ScrollVelocity from "../components/reactbits/ScrollVelocity";
+import EmailProtector from "../components/EmailProtector.astro";
 ---
 
 <Layout 
@@ -61,7 +62,7 @@ import ScrollVelocity from "../components/reactbits/ScrollVelocity";
         </AnimatedContent>
 
         <!-- Main Heading -->
-        <div class="mb-6">
+        <h1 class="mb-6">
           <BlurText
             text="Build Your Future With Us"
             delay={100}
@@ -70,7 +71,7 @@ import ScrollVelocity from "../components/reactbits/ScrollVelocity";
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-4 [text-shadow:_0_2px_20px_rgb(0_180_216_/_20%)] justify-center"
             client:load
           />
-        </div>
+        </h1>
 
         <!-- Description -->
         <AnimatedContent
@@ -366,16 +367,17 @@ import ScrollVelocity from "../components/reactbits/ScrollVelocity";
 
               <!-- CTA -->
               <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:hello@kandela.tech?subject=Career Inquiry"
-                  class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] text-white rounded-full px-8 py-4 text-base font-bold shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:shadow-[0_0_50px_rgba(0,180,216,0.6)] hover:scale-105 transition-all duration-300 overflow-hidden"
+                <EmailProtector
+                  email="hello@kandela.tech"
+                  subject="Career Inquiry"
+                  className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] text-white rounded-full px-8 py-4 text-base font-bold shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:shadow-[0_0_50px_rgba(0,180,216,0.6)] hover:scale-105 transition-all duration-300 overflow-hidden"
                 >
                   <span class="absolute inset-0 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   <svg class="relative z-10 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                   <span class="relative z-10">Send Your CV</span>
-                </a>
+                </EmailProtector>
                 <a
                   href="/"
                   class="group relative inline-flex items-center justify-center gap-3 bg-white text-gray-900 rounded-full px-8 py-4 text-base font-bold border-2 border-gray-300 hover:border-[#00B4D8] hover:bg-gray-50 transition-all duration-300"

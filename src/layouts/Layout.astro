@@ -11,7 +11,7 @@ export interface Props {
 const { 
 	title, 
 	description = "Kandela Technology - Your Guiding Light in Innovation. Kami menyediakan solusi teknologi inovatif termasuk Web3 Development, Website & App Development, Custom Software, dan IT Staffing Solutions.",
-	keywords = "Kandela Technology, Web3 Development, Blockchain Development, Website Development, App Development, Custom Software, IT Staffing, Software House Jakarta, Technology Solutions Indonesia",
+	keywords = "Kandela Technology, Web3 Development, Blockchain Development, Website Development, App Development, Custom Software, IT Staffing, Software House Jakarta, Technology Solutions Indonesia, Jasa Pembuatan Website, Jasa Aplikasi Mobile, Pengembangan Blockchain, Solusi Web3, Perusahaan Teknologi Jakarta, Software House Indonesia, Jasa IT Profesional, Pembuatan Aplikasi Web, Developer Blockchain Indonesia, Smart Contract Development, NFT Development Indonesia, DeFi Development, Decentralized Application, Jasa Web Development Jakarta, Mobile App Development Indonesia, Custom Software Indonesia, IT Consultant Jakarta, Digital Transformation Indonesia, Software Developer Jakarta, Technology Partner Indonesia, Outsourcing IT Indonesia, IT Staffing Jakarta, Tech Solutions Jakarta, Pembuatan Website Profesional, Aplikasi Android iOS, Web Application Development, Backend Development, Frontend Development, Full Stack Development Indonesia",
 	ogImage = "/kandela-transparent.png",
 	ogType = "website",
 	canonical = Astro.url.pathname
@@ -87,7 +87,6 @@ const fullOgImage = `${siteUrl}${ogImage}`;
 				"url": "https://kandela.tech",
 				"logo": "https://kandela.tech/logo-k-shine.webp",
 				"description": "Kandela Technology adalah perusahaan teknologi yang menyediakan solusi inovatif dalam Web3 Development, Website & App Development, Custom Software, dan IT Staffing Solutions.",
-				"email": "hello@kandela.tech",
 				"address": {
 					"@type": "PostalAddress",
 					"addressLocality": "Jakarta",
@@ -99,7 +98,6 @@ const fullOgImage = `${siteUrl}${ogImage}`;
 				],
 				"contactPoint": {
 					"@type": "ContactPoint",
-					"email": "hello@kandela.tech",
 					"contactType": "Customer Service",
 					"availableLanguage": ["Indonesian", "English"]
 				}
@@ -200,7 +198,7 @@ const fullOgImage = `${siteUrl}${ogImage}`;
 		// Fallback: Hide after 5 seconds max
 		setTimeout(function() {
 			if (!document.body.classList.contains('page-loaded')) {
-				console.log('Fallback: Hiding page loader after timeout');
+				// console.log('Fallback: Hiding page loader after timeout');
 				hideLoader();
 			}
 		}, 5000);

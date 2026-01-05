@@ -2,6 +2,7 @@
 import AnimatedContent from "../reactbits/AnimatedContent";
 import BlurText from "../reactbits/BlurText";
 import ScrollVelocity from "../reactbits/ScrollVelocity";
+import EmailProtector from "../EmailProtector.astro";
 
 // Get current year
 const currentYear = new Date().getFullYear();
@@ -324,7 +325,10 @@ const currentYear = new Date().getFullYear();
           <h4 class="text-base lg:text-lg font-black text-gray-900 mb-3 lg:mb-5">Get In Touch</h4>
           <ul class="space-y-3 lg:space-y-4 inline-block md:block">
             <li>
-              <a href="mailto:hello@kandela.tech" class="group flex items-start gap-3 text-sm text-gray-700 hover:text-[#0077B6] transition-colors duration-300">
+              <EmailProtector
+                email="hello@kandela.tech"
+                className="group flex items-start gap-3 text-sm text-gray-700 hover:text-[#0077B6] transition-colors duration-300"
+              >
                 <div class="w-9 h-9 lg:w-10 lg:h-10 bg-gradient-to-br from-[#00B4D8] to-[#0077B6] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md">
                   <svg class="w-4 h-4 lg:w-5 lg:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -332,9 +336,9 @@ const currentYear = new Date().getFullYear();
                 </div>
                 <div class="text-left">
                   <div class="font-bold text-gray-900 mb-0.5 text-sm">Email</div>
-                  <div class="font-semibold text-xs lg:text-sm break-words">hello@kandela.tech</div>
+                  <div class="font-semibold text-xs lg:text-sm break-words email-text" data-email="aGVsbG9Aa2FuZGVsYS50ZWNo"></div>
                 </div>
-              </a>
+              </EmailProtector>
             </li>
             <li>
               <div class="flex items-start gap-3 text-sm text-gray-700">

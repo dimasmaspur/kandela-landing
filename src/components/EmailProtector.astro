@@ -1,0 +1,71 @@
+---
+export interface Props {
+  email: string;
+  subject?: string;
+  className?: string;
+  showEmail?: boolean;
+  children?: any;
+}
+
+const { email, subject = '', className = '', showEmail = false } = Astro.props;
+
+// Simple encoding to obfuscate email from bots
+const encoded = btoa(email);
+const encodedSubject = subject ? btoa(subject) : '';
+---
+
+<a 
+  href="#" 
+  class={`email-protected ${className}`}
+  data-email={encoded}
+  data-subject={encodedSubject}
+  onclick="return false;"
+>
+  {showEmail ? (
+    <span class="email-text" data-email={encoded}></span>
+  ) : (
+    <slot />
+  )}
+</a>
+
+<script>
+  // Decode and set email links on page load
+  function initEmailProtection() {
+    const emailLinks = document.querySelectorAll('.email-protected');
+    
+    emailLinks.forEach((link) => {
+      const encoded = link.getAttribute('data-email');
+      const encodedSubject = link.getAttribute('data-subject');
+      
+      if (encoded) {
+        try {
+          const email = atob(encoded);
+          let mailto = 'mailto:' + email;
+          
+          if (encodedSubject) {
+            const subject = atob(encodedSubject);
+            mailto += '?subject=' + encodeURIComponent(subject);
+          }
+          
+          link.setAttribute('href', mailto);
+          
+          // If there's an email-text span, populate it
+          const emailText = link.querySelector('.email-text');
+          if (emailText) {
+            emailText.textContent = email;
+          }
+        } catch (e) {
+          console.error('Error decoding email:', e);
+        }
+      }
+    });
+  }
+
+  // Run on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEmailProtection);
+  } else {
+    initEmailProtection();
+  }
+</script>
+

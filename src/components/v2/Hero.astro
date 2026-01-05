@@ -5,7 +5,7 @@ import BlurText from "../reactbits/BlurText";
 import AnimatedContent from "../reactbits/AnimatedContent";
 
 const handleAnimationComplete = () => {
-    console.log("Animation completed!");
+    // console.log("Animation completed!");
 };
 ---
 
@@ -130,7 +130,7 @@ const handleAnimationComplete = () => {
                         class="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#00B4D8]/20 via-[#0077B6]/20 to-transparent blur-3xl opacity-50"
                     >
                     </div>
-                    <div class="lg:text-left text-center">
+                    <h1 class="lg:text-left text-center">
                         <BlurText
                             text="Your Guiding Light in Innovation."
                             delay={200}
@@ -140,7 +140,7 @@ const handleAnimationComplete = () => {
                             className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-tight justify-center lg:justify-start"
                             client:load
                         />
-                    </div>
+                    </h1>
                 </div>
 
                 <!-- Description -->
@@ -587,7 +587,7 @@ const handleAnimationComplete = () => {
         // Fallback: Show content after max 3 seconds even if not fully loaded
         setTimeout(() => {
             if (!heroSection.classList.contains('loaded')) {
-                console.log('Fallback: Showing content after timeout');
+                // console.log('Fallback: Showing content after timeout');
                 showContent();
             }
         }, 3000);
