@@ -102,7 +102,7 @@ import BlurText from '../components/reactbits/BlurText';
                 <!-- Projects Grid -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
                     
-                    <!-- Project 1: Digital Desa -->
+                    <!-- Project 1: Violin Room -->
                     <AnimatedContent
                         distance={50}
                         direction="vertical"
@@ -114,29 +114,292 @@ import BlurText from '../components/reactbits/BlurText';
                         delay={0.1}
                         client:load
                     >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/violin.webp"
+                                    alt="Violin Room"
+                                />
+                                
+                                <div class="absolute top-4 right-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#00B4D8] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">01</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Complete Violin Learning App
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#00B4D8] transition-colors duration-300">
+                                    Violin Room
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    Violin Room is a violin learning app designed as a complete solution for anyone looking to master the violin, from beginners to professional players. This app combines structured violin courses, an accurate violin tuner, and a precision violin metronome in one convenient and easy-to-use platform.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 2: Toaken -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.2}
+                        client:load
+                    >
                         <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
-                            <!-- Animated Gradient Border -->
                             <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
                             
-                            <!-- Glowing Background -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/20 via-transparent to-[#00B4D8]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            
-                            <!-- Image Header -->
-                            <div class="relative h-64 overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/40 to-[#00B4D8]/40 mix-blend-overlay z-10 group-hover:from-[#0077B6]/60 group-hover:to-[#00B4D8]/60 transition-all duration-500"></div>
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-[#00B4D8]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
                                 <img
-                                    class="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700"
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/toaken.webp"
+                                    alt="Toaken"
+                                />
+                                
+                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0077B6] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">02</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Smart Contract Staking • Blockchain
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0077B6] transition-colors duration-300">
+                                    Toaken
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    This is a decentralized application (DApp) for staking Ethereum (ETH) tokens. The application interacts with a smart contract deployed on the Sepolia test network to allow users to stake and unstake ETH and view their staking details.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 3: Royal Gading SPA -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.3}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/Royal Gading.png"
+                                    alt="Royal Gading SPA"
+                                />
+                                
+                                <div class="absolute top-4 right-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#00B4D8] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">03</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Wellness • Hospitality
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#00B4D8] transition-colors duration-300">
+                                    Royal Gading SPA
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    An elegant wellness center website featuring spa services, treatment packages, online booking system, and a serene digital experience that reflects luxury and relaxation.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 4: Warung Pintar -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.4}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-[#00B4D8]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/Warung Pintar.png"
+                                    alt="Warung Pintar"
+                                />
+                                
+                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0077B6] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">04</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Retail Tech • POS
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0077B6] transition-colors duration-300">
+                                    Warung Pintar
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    A smart retail technology platform digitizing traditional Indonesian warungs with inventory management, point-of-sale systems, and data analytics to modernize local businesses.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 5: Cryaistal -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.5}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(13,59,102,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0D3B66] via-[#0077B6] to-[#0D3B66] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/crystal.webp"
+                                    alt="Cryaistal"
+                                />
+                                
+                                <div class="absolute top-4 right-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0D3B66] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0D3B66] to-[#0077B6] bg-clip-text text-transparent">05</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0D3B66]/10 to-[#0077B6]/10 border border-[#0D3B66]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Crypto Trading Automation • Blockchain
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0D3B66] transition-colors duration-300">
+                                    Cryaistal
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    CRYSTAISTAL is a platform that simplifies crypto trading with automated buy/sell features and subscription-based trading, operating on both EVM and Solana networks.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 6: Villa Rental RWA -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.6}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/vlt.webp"
+                                    alt="Villa Rental RWA"
+                                />
+                                
+                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#00B4D8] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">06</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Real World Asset Tokenization • Blockchain
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#00B4D8] transition-colors duration-300">
+                                    Villa Rental RWA
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    The future of leasing is on blockchain. Rent villas using Ethereum, claim rewards with VLT Tokens, and benefit from fast, low-cost transactions on the Lisk Network, an Ethereum L2.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 7: Digital Desa -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.7}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-[#00B4D8]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
                                     src="/p1.png"
                                     alt="Digital Desa"
                                 />
                                 
-                                <!-- Number Badge -->
                                 <div class="absolute top-4 right-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0077B6] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
-                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">01</span>
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">07</span>
                                 </div>
                             </div>
 
-                            <!-- Content -->
                             <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
                                 <div class="mb-4">
                                     <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-bold text-gray-800">
@@ -154,7 +417,7 @@ import BlurText from '../components/reactbits/BlurText';
                         </div>
                     </AnimatedContent>
 
-                    <!-- Project 2: Teritorial -->
+                    <!-- Project 8: Podomoro Park -->
                     <AnimatedContent
                         distance={50}
                         direction="vertical"
@@ -163,33 +426,213 @@ import BlurText from '../components/reactbits/BlurText';
                         ease="power3.out"
                         initialOpacity={0}
                         animateOpacity
-                        delay={0.2}
+                        delay={0.8}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(13,59,102,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0D3B66] via-[#0077B6] to-[#0D3B66] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/Podomoro Park.png"
+                                    alt="Podomoro Park"
+                                />
+                                
+                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0D3B66] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0D3B66] to-[#0077B6] bg-clip-text text-transparent">08</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0D3B66]/10 to-[#0077B6]/10 border border-[#0D3B66]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Real Estate • Property
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0D3B66] transition-colors duration-300">
+                                    Podomoro Park
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    A premium residential and commercial development website showcasing luxury properties, amenities, and location advantages with elegant design and seamless user experience.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 9: Dataku -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={0.9}
                         client:load
                     >
                         <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
                             <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
                             
-                            <div class="relative h-64 overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/40 to-[#0077B6]/40 mix-blend-overlay z-10 group-hover:from-[#00B4D8]/60 group-hover:to-[#0077B6]/60 transition-all duration-500"></div>
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
                                 <img
-                                    class="w-full h-full object-cover group-hover:scale-125 group-hover:-rotate-2 transition-all duration-700"
-                                    src="/p2.png"
-                                    alt="Teritorial"
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/dataku.webp"
+                                    alt="Dataku"
                                 />
                                 
-                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#00B4D8] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
-                                    <span class="text-3xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">02</span>
+                                <div class="absolute top-4 right-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#00B4D8] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">09</span>
                                 </div>
                             </div>
 
                             <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
                                 <div class="mb-4">
                                     <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-bold text-gray-800">
-                                        News Portal • Media Tech
+                                        Business Management System
                                     </span>
                                 </div>
 
                                 <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#00B4D8] transition-colors duration-300">
+                                    Dataku
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    Dataku Tangsel is a system for managing companies and UMKM in South Tangerang. It provides data visualization and tools to verify and manage company records based on specific districts.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 10: Club OpenRoad -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={1.0}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/openroad.webp"
+                                    alt="Club OpenRoad"
+                                />
+                                
+                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#00B4D8] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">10</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Dealership Loyalty Platform
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#00B4D8] transition-colors duration-300">
+                                    Club OpenRoad
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    Club Openroad is a loyalty platform for Canadian dealerships. It helps you manage branches, offer rewards, and streamline service bookings, strengthening customer relationships.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 11: Servee -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={1.1}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-[#00B4D8]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/servee.webp"
+                                    alt="Servee"
+                                />
+                                
+                                <div class="absolute top-4 right-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0077B6] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">11</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Food Ordering Platform
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0077B6] transition-colors duration-300">
+                                    Servee
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    Servee is a food ordering app where customers scan a barcode at their table to view menus, place orders, and pay using multiple payment options.
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 12: Teritorial -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={1.2}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(13,59,102,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0D3B66] via-[#0077B6] to-[#0D3B66] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/p2.png"
+                                    alt="Teritorial"
+                                />
+                                
+                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0D3B66] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0D3B66] to-[#0077B6] bg-clip-text text-transparent">12</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0D3B66]/10 to-[#0077B6]/10 border border-[#0D3B66]/30 rounded-full text-xs font-bold text-gray-800">
+                                        News Portal • Media Tech
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0D3B66] transition-colors duration-300">
                                     Teritorial
                                 </h3>
                                 <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
@@ -199,7 +642,7 @@ import BlurText from '../components/reactbits/BlurText';
                         </div>
                     </AnimatedContent>
 
-                    <!-- Project 3: Anglebull -->
+                    <!-- Project 13: Bapro -->
                     <AnimatedContent
                         distance={50}
                         direction="vertical"
@@ -208,22 +651,67 @@ import BlurText from '../components/reactbits/BlurText';
                         ease="power3.out"
                         initialOpacity={0}
                         animateOpacity
-                        delay={0.3}
+                        delay={1.3}
+                        client:load
+                    >
+                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+                            
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-[#00B4D8]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
+                                <img
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
+                                    src="/bapro.webp"
+                                    alt="Bapro"
+                                />
+                                
+                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0077B6] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">13</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-bold text-gray-800">
+                                        Project & Procurement Management
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0077B6] transition-colors duration-300">
+                                    Bapro
+                                </h3>
+                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
+                                    Connecting Projects and Providers: Transparent Tendering with Built-In Payments and Tracking, Simplifying Procurement: Open Tendering and Seamless Collaboration in One Platform
+                                </p>
+                            </div>
+                        </div>
+                    </AnimatedContent>
+
+                    <!-- Project 14: Anglebull -->
+                    <AnimatedContent
+                        distance={50}
+                        direction="vertical"
+                        reverse={false}
+                        duration={1.5}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity
+                        delay={1.4}
                         client:load
                     >
                         <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(13,59,102,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
                             <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0D3B66] via-[#0077B6] to-[#0D3B66] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
                             
-                            <div class="relative h-64 overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/40 to-[#0077B6]/40 mix-blend-overlay z-10 group-hover:from-[#0D3B66]/60 group-hover:to-[#0077B6]/60 transition-all duration-500"></div>
+                            <div class="relative h-96 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/5 to-[#0077B6]/5 mix-blend-overlay z-10 transition-all duration-500"></div>
                                 <img
-                                    class="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700"
+                                    class="w-full h-full object-cover group-hover:object-contain group-hover:p-6 transition-all duration-700"
                                     src="/anglebull.png"
                                     alt="Anglebull"
                                 />
                                 
                                 <div class="absolute top-4 right-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0D3B66] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
-                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0D3B66] to-[#0077B6] bg-clip-text text-transparent">03</span>
+                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0D3B66] to-[#0077B6] bg-clip-text text-transparent">14</span>
                                 </div>
                             </div>
 
@@ -239,141 +727,6 @@ import BlurText from '../components/reactbits/BlurText';
                                 </h3>
                                 <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
                                     A comprehensive investment platform providing real-time market analysis, portfolio management tools, and advanced trading features to help investors make informed financial decisions.
-                                </p>
-                            </div>
-                        </div>
-                    </AnimatedContent>
-
-                    <!-- Project 4: Podomoro Park -->
-                    <AnimatedContent
-                        distance={50}
-                        direction="vertical"
-                        reverse={false}
-                        duration={1.5}
-                        ease="power3.out"
-                        initialOpacity={0}
-                        animateOpacity
-                        delay={0.4}
-                        client:load
-                    >
-                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,180,216,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
-                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#00B4D8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
-                            
-                            <div class="relative h-64 overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/40 to-[#0077B6]/40 mix-blend-overlay z-10 group-hover:from-[#00B4D8]/60 group-hover:to-[#0077B6]/60 transition-all duration-500"></div>
-                                <img
-                                    class="w-full h-full object-cover group-hover:scale-125 group-hover:-rotate-2 transition-all duration-700"
-                                    src="/Podomoro Park.png"
-                                    alt="Podomoro Park"
-                                />
-                                
-                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#00B4D8] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
-                                    <span class="text-3xl font-black bg-gradient-to-br from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">04</span>
-                                </div>
-                            </div>
-
-                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
-                                <div class="mb-4">
-                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#00B4D8]/10 to-[#0077B6]/10 border border-[#00B4D8]/30 rounded-full text-xs font-bold text-gray-800">
-                                        Real Estate • Property
-                                    </span>
-                                </div>
-
-                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#00B4D8] transition-colors duration-300">
-                                    Podomoro Park
-                                </h3>
-                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
-                                    A premium residential and commercial development website showcasing luxury properties, amenities, and location advantages with elegant design and seamless user experience.
-                                </p>
-                            </div>
-                        </div>
-                    </AnimatedContent>
-
-                    <!-- Project 5: Royal Gading SPA -->
-                    <AnimatedContent
-                        distance={50}
-                        direction="vertical"
-                        reverse={false}
-                        duration={1.5}
-                        ease="power3.out"
-                        initialOpacity={0}
-                        animateOpacity
-                        delay={0.5}
-                        client:load
-                    >
-                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(0,119,182,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
-                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
-                            
-                            <div class="relative h-64 overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#0077B6]/40 to-[#00B4D8]/40 mix-blend-overlay z-10 group-hover:from-[#0077B6]/60 group-hover:to-[#00B4D8]/60 transition-all duration-500"></div>
-                                <img
-                                    class="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700"
-                                    src="/Royal Gading.png"
-                                    alt="Royal Gading SPA"
-                                />
-                                
-                                <div class="absolute top-4 right-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0077B6] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
-                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">05</span>
-                                </div>
-                            </div>
-
-                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
-                                <div class="mb-4">
-                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0077B6]/10 to-[#00B4D8]/10 border border-[#0077B6]/30 rounded-full text-xs font-bold text-gray-800">
-                                        Wellness • Hospitality
-                                    </span>
-                                </div>
-
-                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0077B6] transition-colors duration-300">
-                                    Royal Gading SPA
-                                </h3>
-                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
-                                    An elegant wellness center website featuring spa services, treatment packages, online booking system, and a serene digital experience that reflects luxury and relaxation.
-                                </p>
-                            </div>
-                        </div>
-                    </AnimatedContent>
-
-                    <!-- Project 6: Warung Pintar -->
-                    <AnimatedContent
-                        distance={50}
-                        direction="vertical"
-                        reverse={false}
-                        duration={1.5}
-                        ease="power3.out"
-                        initialOpacity={0}
-                        animateOpacity
-                        delay={0.6}
-                        client:load
-                    >
-                        <div class="group relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(13,59,102,0.2)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 h-full flex flex-col">
-                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#0D3B66] via-[#0077B6] to-[#0D3B66] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-x" style="padding: 2px; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
-                            
-                            <div class="relative h-64 overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-br from-[#0D3B66]/40 to-[#0077B6]/40 mix-blend-overlay z-10 group-hover:from-[#0D3B66]/60 group-hover:to-[#0077B6]/60 transition-all duration-500"></div>
-                                <img
-                                    class="w-full h-full object-cover group-hover:scale-125 group-hover:-rotate-2 transition-all duration-700"
-                                    src="/Warung Pintar.png"
-                                    alt="Warung Pintar"
-                                />
-                                
-                                <div class="absolute top-4 left-4 z-20 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl border-2 border-[#0D3B66] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500">
-                                    <span class="text-3xl font-black bg-gradient-to-br from-[#0D3B66] to-[#0077B6] bg-clip-text text-transparent">06</span>
-                                </div>
-                            </div>
-
-                            <div class="p-6 lg:p-8 relative flex-1 flex flex-col">
-                                <div class="mb-4">
-                                    <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0D3B66]/10 to-[#0077B6]/10 border border-[#0D3B66]/30 rounded-full text-xs font-bold text-gray-800">
-                                        Retail Tech • POS
-                                    </span>
-                                </div>
-
-                                <h3 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3 group-hover:text-[#0D3B66] transition-colors duration-300">
-                                    Warung Pintar
-                                </h3>
-                                <p class="text-sm lg:text-base text-gray-700 leading-relaxed flex-1">
-                                    A smart retail technology platform digitizing traditional Indonesian warungs with inventory management, point-of-sale systems, and data analytics to modernize local businesses.
                                 </p>
                             </div>
                         </div>
@@ -397,7 +750,7 @@ import BlurText from '../components/reactbits/BlurText';
                 delay={0.7}
                 client:load
             >
-                <div class="text-center mt-16 lg:mt-20">
+                <div class="text-center mt-16 lg:mt-20 mx-16">
                     <div class="inline-flex items-center gap-3 bg-white/60 backdrop-blur-md border border-gray-300 rounded-full px-6 py-3 shadow-lg">
                         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
